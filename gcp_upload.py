@@ -1,11 +1,24 @@
 import sqlite3
 import pandas as pd
 import sys
+import os
 
-def upload_to_bigquery(db_path="typo_trading.db", project_id=None, dataset_id="typo_trading"):
+def get_latest_data_dir(base_dir="data"):
+    if not os.path.exists(base_dir):
+        return None
+    subdirs = [os.path.join(base_dir, d) for d in os.listdir(base_dir) if os.path.isdir(os.path.join(base_dir, d))]
+    if not subdirs:
+        return None
+    return max(subdirs, key=os.path.getmtime)
+
+def upload_to_bigquery(db_path, project_id, dataset_id="typo_trading"):
     """
     Reads tables from SQLite and uploads to BigQuery.
     """
+    if not os.path.exists(db_path):
+        print(f"Database file not found: {db_path}")
+        return
+
     try:
         from google.cloud import bigquery
         from google.api_core.exceptions import NotFound
@@ -14,10 +27,7 @@ def upload_to_bigquery(db_path="typo_trading.db", project_id=None, dataset_id="t
         print("pip install google-cloud-bigquery")
         return
 
-    if not project_id:
-        print("Please provide a Google Cloud Project ID.")
-        return
-
+    print(f"Uploading data from: {db_path}")
     client = bigquery.Client(project=project_id)
 
     # specific functionality to create dataset if not exists
@@ -65,6 +75,28 @@ def upload_to_bigquery(db_path="typo_trading.db", project_id=None, dataset_id="t
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python gcp_upload.py <YOUR_GCP_PROJECT_ID>")
+        print("Usage: python gcp_upload.py <YOUR_GCP_PROJECT_ID> [OPTIONAL_DB_PATH]")
+        sys.exit(1)
+    
+    project_id = sys.argv[1]
+    db_path = None
+    
+    # Check if DB path provided as arg
+    if len(sys.argv) >= 3:
+        db_path = sys.argv[2]
     else:
-        upload_to_bigquery(project_id=sys.argv[1])
+        # Find latest
+        data_dir = get_latest_data_dir()
+        if data_dir:
+            potential_path = os.path.join(data_dir, "typo_trading.db")
+            if os.path.exists(potential_path):
+                db_path = potential_path
+            else:
+                print(f"No database found in latest directory: {data_dir}")
+        else:
+            print("No data directory found.")
+
+    if db_path:
+        upload_to_bigquery(db_path=db_path, project_id=project_id)
+    else:
+        print("Could not locate typo_trading.db. Please provide path explicitly.")
