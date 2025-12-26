@@ -124,11 +124,18 @@ def save_to_db(results, db_path):
     print(f"Results saved to SQLite database: {db_path}")
 
 def main():
-    # Find latest data directory
-    data_dir = get_latest_data_dir()
-    if not data_dir:
-        print("No data directory found. Please run fetch_data.py first.")
-        return
+    # 1. Determine data directory
+    if len(sys.argv) > 1:
+        data_dir = sys.argv[1]
+        if not os.path.exists(data_dir):
+            print(f"Error: Directory '{data_dir}' does not exist.")
+            return
+    else:
+        # Find latest data directory
+        data_dir = get_latest_data_dir()
+        if not data_dir:
+            print("No data directory found. Please run fetch_data.py first.")
+            return
     
     print(f"Using data from: {data_dir}")
     
