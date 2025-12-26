@@ -1,0 +1,6 @@
+pandas
+yfinance
+rapidfuzz
+requests
+google-cloud-bigquery
+db-dtypes
