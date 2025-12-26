@@ -76,6 +76,17 @@ def analyze_correlation(target_df, candidate_df, target_ticker, candidate_ticker
     if df.empty:
         return None
 
+    # Calculate returns for the whole period
+    df['Target_Ret'] = df['Target_Close'].pct_change()
+    df['Candidate_Ret'] = df['Candidate_Close'].pct_change()
+    
+    # Calculate baseline correlation
+    corr_all = df['Target_Ret'].corr(df['Candidate_Ret'])
+    
+    # Filter out pairs with implausibly high baseline correlation (likely derivatives or sector peers)
+    if abs(corr_all) > 0.9:
+        return None
+
     # Identify high volume days for Target (e.g., > 2 std dev above rolling mean)
     # Using a 20-day rolling mean
     df['Vol_Mean'] = df['Target_Vol'].rolling(window=20).mean()
@@ -88,18 +99,11 @@ def analyze_correlation(target_df, candidate_df, target_ticker, candidate_ticker
         return {
             'Target': target_ticker,
             'Candidate': candidate_ticker,
-            'Correlation_All': df['Target_Close'].corr(df['Candidate_Close']),
+            'Correlation_All': corr_all,
             'High_Vol_Count': 0,
             'Correlation_High_Vol': None
         }
 
-    # Correlation on high volume days (price movement)
-    # We look at daily returns correlation
-    df['Target_Ret'] = df['Target_Close'].pct_change()
-    df['Candidate_Ret'] = df['Candidate_Close'].pct_change()
-    
-    corr_all = df['Target_Ret'].corr(df['Candidate_Ret'])
-    
     # Correlation specifically on the high volume days
     # (Note: Sample size might be small)
     high_vol_corr = df.loc[df['High_Vol_Event'], 'Target_Ret'].corr(df.loc[df['High_Vol_Event'], 'Candidate_Ret'])

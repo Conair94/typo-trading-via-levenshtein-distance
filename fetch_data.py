@@ -94,20 +94,37 @@ def is_correlated_by_design(target, candidate, candidate_name):
     """
     Checks if the candidate is likely correlated by design to the target.
     Logic:
-    1. If candidate name contains the target ticker (whole word).
-    2. If candidate name contains "Bull", "Bear", "2X", "3X", "ETF" AND target ticker.
+    1. If candidate name contains the target ticker.
+       - If target len > 3, substring match is sufficient (e.g. 'TSLA' in 'TSLA Bull').
+       - If target len <= 3, require whole word match to avoid false positives (e.g. 'M' in 'MGM').
+    2. Specific exclusion for Crypto/Currency trust confusion (e.g. ETH vs ETHA).
     """
     
     # Normalize
     cand_name_upper = candidate_name.upper()
     target_upper = target.upper()
     
-    # Check if target ticker appears as a whole word in candidate name
-    # e.g. "TSLA" in "DIREXION DAILY TSLA BULL"
-    # Using regex boundary \b
-    if re.search(r'\b' + re.escape(target_upper) + r'\b', cand_name_upper):
-        return True
-        
+    # 1. Ticker in Name Check
+    if len(target_upper) > 3:
+        if target_upper in cand_name_upper:
+            return True
+    else:
+        # Use regex boundary \b for short tickers
+        if re.search(r'\b' + re.escape(target_upper) + r'\b', cand_name_upper):
+            return True
+
+    # 2. Crypto/Currency Heuristics
+    # If one is a trust/ETF for the other's underlying asset class (often implied by similar tickers starting with same letters)
+    # Example: ETH (stock) vs ETHA (Ethereum Trust). 
+    # Heuristic: If candidate name contains "BITCOIN", "ETHER", "CRYPTO", "TRUST", "ETF" 
+    # AND the tickers share the first 2-3 letters, it's likely a product relation, not a typo.
+    
+    suspect_keywords = ["BITCOIN", "ETHER", "ETHEREUM", "CRYPTO", "TRUST", "ETF", "FUND", "SHARES"]
+    if any(k in cand_name_upper for k in suspect_keywords):
+        # If tickers start with same 2 chars (e.g. ET..), assume relation if one is a Fund.
+        if target_upper[:2] == candidate[:2]:
+            return True
+
     return False
 
 def calculate_distances(target_tickers, all_tickers_dict, threshold=1):
