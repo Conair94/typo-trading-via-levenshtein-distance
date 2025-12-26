@@ -123,6 +123,64 @@ def save_to_db(results, db_path):
     conn.close()
     print(f"Results saved to SQLite database: {db_path}")
 
+def generate_summary_readme(df, data_dir):
+    readme_path = os.path.join(data_dir, "README.md")
+    
+    # Calculate stats
+    total_pairs = len(df)
+    
+    # Baseline stats
+    avg_corr_all = df['Correlation_All'].mean()
+    std_corr_all = df['Correlation_All'].std()
+    
+    # High Vol stats (filter for non-null)
+    high_vol_series = df['Correlation_High_Vol'].dropna()
+    avg_corr_hv = high_vol_series.mean() if not high_vol_series.empty else np.nan
+    std_corr_hv = high_vol_series.std() if not high_vol_series.empty else np.nan
+    count_hv = len(high_vol_series)
+    
+    content = f"""# Analysis Summary
+**Run Date:** {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+
+## Overview
+* **Total Pairs Analyzed:** {total_pairs}
+* **Pairs with High Volume Events:** {count_hv} ({count_hv/total_pairs*100:.1f}%)
+
+## Statistical Metrics
+
+### Baseline Correlation (All Days)
+* **Mean:** {avg_corr_all:.4f}
+* **Std Dev:** {std_corr_all:.4f}
+
+### High Volume Event Correlation
+* **Mean:** {avg_corr_hv:.4f}
+* **Std Dev:** {std_corr_hv:.4f}
+
+## Top 5 Positively Correlated Pairs (High Volume Events)
+"""
+    # Top 5 Positive
+    if not high_vol_series.empty:
+        top_5 = df.sort_values(by='Correlation_High_Vol', ascending=False).head(5)
+        content += "| Target | Candidate | Distance | High Vol Corr | Baseline Corr |\n"
+        content += "| :--- | :--- | :--- | :--- | :--- |\n"
+        for _, row in top_5.iterrows():
+            content += f"| {row['Target']} | {row['Candidate']} | {row['Distance']} | {row['Correlation_High_Vol']:.4f} | {row['Correlation_All']:.4f} |\n"
+    else:
+        content += "No high volume events found.\n"
+        
+    content += "\n## Top 5 Negatively Correlated Pairs (High Volume Events)\n"
+    if not high_vol_series.empty:
+        bot_5 = df.sort_values(by='Correlation_High_Vol', ascending=True).head(5)
+        content += "| Target | Candidate | Distance | High Vol Corr | Baseline Corr |\n"
+        content += "| :--- | :--- | :--- | :--- | :--- |\n"
+        for _, row in bot_5.iterrows():
+            content += f"| {row['Target']} | {row['Candidate']} | {row['Distance']} | {row['Correlation_High_Vol']:.4f} | {row['Correlation_All']:.4f} |\n"
+
+
+    with open(readme_path, "w") as f:
+        f.write(content)
+    print(f"Summary README generated at: {readme_path}")
+
 def main():
     # 1. Determine data directory
     if len(sys.argv) > 1:
@@ -179,8 +237,12 @@ def main():
         save_to_db(results, db_path)
         
         csv_path = os.path.join(data_dir, "study_results.csv")
-        pd.DataFrame(results).to_csv(csv_path, index=False)
+        df_results = pd.DataFrame(results)
+        df_results.to_csv(csv_path, index=False)
         print(f"Results saved to {csv_path}")
+        
+        # Generate Summary
+        generate_summary_readme(df_results, data_dir)
     else:
         print("No results generated.")
 

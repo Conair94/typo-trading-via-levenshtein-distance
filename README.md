@@ -47,12 +47,16 @@ python3 fetch_data.py
 ```
 *   *Output:* Creates a timestamped directory (e.g., `data/2023-10-27_14-00-00/`) containing `typo_candidates.csv`.
 
-#### 3. Quantitative Analysis
+### 3. Quantitative Analysis
 Fetches historical OHLCV data for identified pairs and computes correlation metrics during volume spikes.
 ```bash
-python3 analyze_pairs.py
+python3 analyze_pairs.py [OPTIONAL_DATA_DIR]
 ```
-*   *Output:* Generates `study_results.csv` and a SQLite database `typo_trading.db` in the run's data directory.
+*   *Output:*
+    *   `study_results.csv`: Detailed correlation metrics for every pair.
+    *   `typo_trading.db`: SQLite database for SQL queries.
+    *   `README.md`: **Auto-generated statistical summary** including average correlations, standard deviation, and the top 5 most correlated pairs during high-volume events.
+*   *Note:* By default, analyzes the most recent timestamped folder in `data/`. You can specify a different folder as an argument.
 
 #### 4. Data Warehousing (Optional)
 Uploads the results to a Google BigQuery dataset for enterprise-grade querying.
