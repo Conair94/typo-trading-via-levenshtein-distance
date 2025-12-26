@@ -3,62 +3,59 @@ import requests
 import io
 from rapidfuzz import distance
 import yfinance as yf
-import time
-import os
+import re
 
 def get_ticker_data():
     """
     Downloads ticker lists from NASDAQ Trader.
-    Returns a list of tickers.
+    Returns a dictionary of {Ticker: Security Name}.
     """
     print("Downloading ticker lists...")
     headers = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36"
     }
     
+    tickers_dict = {}
+
     # NASDAQ listed
     url_nasdaq = "http://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt"
     try:
         s = requests.get(url_nasdaq, headers=headers).content
         df_nasdaq = pd.read_csv(io.BytesIO(s), sep="|")
-        # Filter out test stocks if needed, keeping only 'Symbol'
-        nasdaq_tickers = df_nasdaq['Symbol'].tolist()
-        # Remove the file creation time entry at the bottom if present
-        nasdaq_tickers = [x for x in nasdaq_tickers if isinstance(x, str) and not x.startswith("File Creation Time")]
+        # Keep Symbol and Security Name
+        # Filter out test stocks and file creation time
+        for _, row in df_nasdaq.iterrows():
+            sym = row['Symbol']
+            name = row['Security Name']
+            if isinstance(sym, str) and not sym.startswith("File Creation Time"):
+                tickers_dict[sym] = str(name)
     except Exception as e:
         print(f"Error downloading NASDAQ list: {e}")
-        nasdaq_tickers = []
 
     # Other listed (NYSE, NYSE American, etc.)
     url_other = "http://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt"
     try:
         s = requests.get(url_other, headers=headers).content
         df_other = pd.read_csv(io.BytesIO(s), sep="|")
-        other_tickers = df_other['ACT Symbol'].tolist()
-        other_tickers = [x for x in other_tickers if isinstance(x, str) and not x.startswith("File Creation Time")]
+        for _, row in df_other.iterrows():
+            sym = row['ACT Symbol']
+            name = row['Security Name']
+            if isinstance(sym, str) and not sym.startswith("File Creation Time"):
+                tickers_dict[sym] = str(name)
     except Exception as e:
         print(f"Error downloading Other listed list: {e}")
-        other_tickers = []
 
-    all_tickers = list(set(nasdaq_tickers + other_tickers))
-    print(f"Found {len(all_tickers)} total tickers.")
-    return all_tickers
+    print(f"Found {len(tickers_dict)} total tickers.")
+    return tickers_dict
 
 def get_top_volume_tickers(tickers, limit=100):
     """
     Fetches volume data for tickers and returns the top 'limit' by volume.
+    Takes a list of tickers.
     """
     print("Fetching volume data (this may take a moment)...")
     
-    # Batch processing to avoid URL length limits or timeouts
-    # yfinance is better with batches, but 8000 might be too many for one call
     batch_size = 1000
-    ticker_data = []
-    
-    # We only need the last few days to get an average volume
-    # Or even just the most recent day. Let's try to get 'Average Volume' from info if possible,
-    # but 'info' is slow because it requires 1 request per ticker.
-    # Faster: use yf.download for last 5 days and take average volume.
     
     chunks = [tickers[i:i + batch_size] for i in range(0, len(tickers), batch_size)]
     
@@ -93,17 +90,38 @@ def get_top_volume_tickers(tickers, limit=100):
     
     return top_tickers.index.tolist()
 
-def calculate_distances(target_tickers, all_tickers, threshold=1):
+def is_correlated_by_design(target, candidate, candidate_name):
+    """
+    Checks if the candidate is likely correlated by design to the target.
+    Logic:
+    1. If candidate name contains the target ticker (whole word).
+    2. If candidate name contains "Bull", "Bear", "2X", "3X", "ETF" AND target ticker.
+    """
+    
+    # Normalize
+    cand_name_upper = candidate_name.upper()
+    target_upper = target.upper()
+    
+    # Check if target ticker appears as a whole word in candidate name
+    # e.g. "TSLA" in "DIREXION DAILY TSLA BULL"
+    # Using regex boundary \b
+    if re.search(r'\b' + re.escape(target_upper) + r'\b', cand_name_upper):
+        return True
+        
+    return False
+
+def calculate_distances(target_tickers, all_tickers_dict, threshold=1):
     """
     Calculates Damerau-Levenshtein distance between target tickers and all tickers.
     Returns a DataFrame of matches within threshold.
     """
     results = []
+    all_tickers_list = list(all_tickers_dict.keys())
     
-    print(f"\nCalculating distances for {len(target_tickers)} targets against {len(all_tickers)} candidates...")
+    print(f"\nCalculating distances for {len(target_tickers)} targets against {len(all_tickers_list)} candidates...")
     
     for target in target_tickers:
-        for candidate in all_tickers:
+        for candidate in all_tickers_list:
             if target == candidate:
                 continue
             
@@ -111,34 +129,39 @@ def calculate_distances(target_tickers, all_tickers, threshold=1):
             dist = distance.DamerauLevenshtein.distance(target, candidate)
             
             if dist <= threshold:
+                # Check for intentional correlation
+                candidate_name = all_tickers_dict.get(candidate, "")
+                if is_correlated_by_design(target, candidate, candidate_name):
+                    # print(f"Skipping correlated pair: {target} vs {candidate} ({candidate_name})")
+                    continue
+                
                 results.append({
                     'Target_Ticker': target,
                     'Candidate_Ticker': candidate,
+                    'Candidate_Name': candidate_name,
                     'Distance': dist
                 })
                 
     return pd.DataFrame(results)
 
 def main():
-    # 1. Get all tickers
-    all_tickers = get_ticker_data()
-    if not all_tickers:
+    # 1. Get all tickers (dict with names)
+    all_tickers_dict = get_ticker_data()
+    if not all_tickers_dict:
         print("No tickers found. Exiting.")
         return
 
+    all_tickers_list = list(all_tickers_dict.keys())
+
     # 2. Identify top 100 by volume
-    # For testing purposes, if yfinance fails or takes too long, 
-    # one might hardcode a few known high volume stocks, but we'll try to fetch.
-    top_100 = get_top_volume_tickers(all_tickers, limit=100)
+    top_100 = get_top_volume_tickers(all_tickers_list, limit=100)
     
     if not top_100:
         print("Could not identify top volume tickers.")
         return
 
-    # 3. Calculate distances
-    # We are looking for "low" distance. Distance of 1 is a single typo.
-    # Distance of 2 might be interesting but significantly more noisy.
-    df_results = calculate_distances(top_100, all_tickers, threshold=1)
+    # 3. Calculate distances with filtering
+    df_results = calculate_distances(top_100, all_tickers_dict, threshold=1)
     
     # 4. Save results
     output_file = "typo_candidates.csv"
