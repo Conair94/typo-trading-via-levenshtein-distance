@@ -2,13 +2,23 @@ import pandas as pd
 import yfinance as yf
 import sqlite3
 import numpy as np
+import os
+import sys
 from datetime import datetime, timedelta
 
-def load_candidates(file_path="typo_candidates.csv"):
+def get_latest_data_dir(base_dir="data"):
+    if not os.path.exists(base_dir):
+        return None
+    subdirs = [os.path.join(base_dir, d) for d in os.listdir(base_dir) if os.path.isdir(os.path.join(base_dir, d))]
+    if not subdirs:
+        return None
+    return max(subdirs, key=os.path.getmtime)
+
+def load_candidates(file_path):
     try:
         return pd.read_csv(file_path)
     except FileNotFoundError:
-        print(f"File {file_path} not found. Please run fetch_data.py first.")
+        print(f"File {file_path} not found.")
         return pd.DataFrame()
 
 def fetch_history(ticker, period="1y"):
@@ -32,11 +42,6 @@ def analyze_correlation(target_df, candidate_df, target_ticker, candidate_ticker
     if target_df.empty or candidate_df.empty:
         return None
 
-    # Align dates
-    # 'Adj Close' and 'Volume' are standard columns
-    
-    # Handle yfinance multi-level column issue if present
-    # (Recent yfinance versions sometimes return (Price, Ticker) columns)
     # Helper to get series and handle multi-index
     def get_col(df, name):
         if name in df.columns:
@@ -107,23 +112,31 @@ def analyze_correlation(target_df, candidate_df, target_ticker, candidate_ticker
         'Correlation_High_Vol': high_vol_corr
     }
 
-def save_to_db(results, db_name="typo_trading.db"):
-    conn = sqlite3.connect(db_name)
+def save_to_db(results, db_path):
+    conn = sqlite3.connect(db_path)
     df = pd.DataFrame(results)
     df.to_sql("correlation_study", conn, if_exists="replace", index=False)
     conn.close()
-    print(f"Results saved to SQLite database: {db_name}")
+    print(f"Results saved to SQLite database: {db_path}")
 
 def main():
-    df_candidates = load_candidates()
+    # Find latest data directory
+    data_dir = get_latest_data_dir()
+    if not data_dir:
+        print("No data directory found. Please run fetch_data.py first.")
+        return
+    
+    print(f"Using data from: {data_dir}")
+    
+    candidates_file = os.path.join(data_dir, "typo_candidates.csv")
+    df_candidates = load_candidates(candidates_file)
+    
     if df_candidates.empty:
         return
 
     results = []
     
     # Iterate through unique pairs
-    # Note: fetch_data.py produces Target, Candidate, Distance
-    
     total_pairs = len(df_candidates)
     print(f"Analyzing {total_pairs} pairs...")
     
@@ -149,13 +162,14 @@ def main():
             res['Distance'] = row['Distance']
             results.append(res)
             
-    # Save results
+    # Save results to the same directory
     if results:
-        save_to_db(results)
+        db_path = os.path.join(data_dir, "typo_trading.db")
+        save_to_db(results, db_path)
         
-        # Also CSV for easy viewing
-        pd.DataFrame(results).to_csv("study_results.csv", index=False)
-        print("Results saved to study_results.csv")
+        csv_path = os.path.join(data_dir, "study_results.csv")
+        pd.DataFrame(results).to_csv(csv_path, index=False)
+        print(f"Results saved to {csv_path}")
     else:
         print("No results generated.")
 

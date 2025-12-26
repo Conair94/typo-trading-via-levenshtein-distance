@@ -144,6 +144,9 @@ def calculate_distances(target_tickers, all_tickers_dict, threshold=1):
                 
     return pd.DataFrame(results)
 
+import os
+from datetime import datetime
+
 def main():
     # 1. Get all tickers (dict with names)
     all_tickers_dict = get_ticker_data()
@@ -163,14 +166,20 @@ def main():
     # 3. Calculate distances with filtering
     df_results = calculate_distances(top_100, all_tickers_dict, threshold=1)
     
-    # 4. Save results
-    output_file = "typo_candidates.csv"
+    # 4. Save results to timestamped folder
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    output_dir = os.path.join("data", timestamp)
+    os.makedirs(output_dir, exist_ok=True)
+    
+    output_file = os.path.join(output_dir, "typo_candidates.csv")
     df_results.to_csv(output_file, index=False)
     print(f"\nFound {len(df_results)} pairs. Saved to {output_file}")
     
     # Also save the list of top 100 for reference
-    pd.Series(top_100, name="Ticker").to_csv("top_100_volume.csv", index=False)
-    print("Saved top 100 tickers to top_100_volume.csv")
+    top_100_file = os.path.join(output_dir, "top_100_volume.csv")
+    pd.Series(top_100, name="Ticker").to_csv(top_100_file, index=False)
+    print(f"Saved top 100 tickers to {top_100_file}")
+    print(f"All data for this run is in: {output_dir}")
 
 if __name__ == "__main__":
     main()
