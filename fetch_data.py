@@ -131,6 +131,96 @@ def is_correlated_by_design(target, candidate, target_name, candidate_name):
 
     return False
 
+# QWERTY Keyboard Adjacency Map (Approximate)
+# Includes horizontal, vertical, and diagonal neighbors
+KEYBOARD_ADJACENCY = {
+    'Q': 'WA', 'W': 'QESA', 'E': 'WRSD', 'R': 'ETDF', 'T': 'RYFG', 'Y': 'TUGH', 'U': 'YIHJ', 'I': 'UOJK', 'O': 'IPKL', 'P': 'OL',
+    'A': 'QWSZ', 'S': 'WEADZX', 'D': 'ERSFXC', 'F': 'RTDGCV', 'G': 'TYFHVB', 'H': 'YUGJBN', 'J': 'UIHKNM', 'K': 'IOJLM', 'L': 'OPK',
+    'Z': 'ASX', 'X': 'SDZC', 'C': 'DFXV', 'V': 'FGCB', 'B': 'GHVN', 'N': 'HJBM', 'M': 'JKN'
+}
+
+def check_keyboard_proximity(ticker1, ticker2):
+    """
+    Checks if ticker2 is a single-character substitution of ticker1
+    where the swapped character is a physical neighbor on a QWERTY keyboard.
+    Example: 'TSLA' vs 'TALA' (S and A are neighbors).
+    """
+    # Proximity only applies to substitution (same length)
+    if len(ticker1) != len(ticker2):
+        return False
+    
+    # Find mismatches
+    diffs = [(c1, c2) for c1, c2 in zip(ticker1, ticker2) if c1 != c2]
+    
+    # Must be exactly one substitution
+    if len(diffs) != 1:
+        return False
+        
+    char1, char2 = diffs[0]
+    
+    # Check adjacency
+    # We check both directions just in case, though map should be symmetric-ish
+    neighbors1 = KEYBOARD_ADJACENCY.get(char1, "")
+    neighbors2 = KEYBOARD_ADJACENCY.get(char2, "")
+    
+    return char2 in neighbors1 or char1 in neighbors2
+
+def validate_active_tickers(tickers):
+    """
+    Checks if tickers have recent trading data (non-zero volume in last 5 days).
+    Returns a set of valid tickers.
+    """
+    if not tickers:
+        return set()
+
+    print(f"\nValidating {len(tickers)} candidates for data availability...")
+    valid_tickers = set()
+    
+    # Batch process
+    batch_size = 500
+    chunks = [tickers[i:i + batch_size] for i in range(0, len(tickers), batch_size)]
+    
+    for i, chunk in enumerate(chunks):
+        try:
+            # Download last 5 days
+            # auto_adjust=True helps get cleaner data
+            df = yf.download(chunk, period="5d", progress=False, auto_adjust=True)
+            
+            if df.empty:
+                continue
+
+            # Extract Volume
+            # yfinance structure varies by version and number of tickers
+            # Ideally we look for 'Volume'
+            vol = None
+            
+            if 'Volume' in df.columns:
+                vol = df['Volume']
+            elif isinstance(df.columns, pd.MultiIndex) and 'Volume' in df.columns.get_level_values(0):
+                 # Try to access top level
+                 vol = df['Volume']
+            
+            if vol is None:
+                continue
+                
+            # Check volume sums
+            if isinstance(vol, pd.Series):
+                # Single ticker case
+                if vol.sum() > 0:
+                    valid_tickers.add(chunk[0])
+            else:
+                # DataFrame case (Tickers as columns)
+                sums = vol.sum()
+                # Filter tickers with volume > 0
+                active = sums[sums > 0].index.tolist()
+                valid_tickers.update(active)
+                
+        except Exception as e:
+            print(f"Warning: Validation batch {i+1} failed: {e}")
+            
+    print(f"  {len(valid_tickers)} out of {len(tickers)} candidates have active trading data.")
+    return valid_tickers
+
 def calculate_distances(target_tickers, all_tickers_dict, threshold=1):
     """
     Calculates Damerau-Levenshtein distance between target tickers and all tickers.
@@ -158,15 +248,35 @@ def calculate_distances(target_tickers, all_tickers_dict, threshold=1):
                     # print(f"Skipping correlated pair: {target} vs {candidate} ({candidate_name})")
                     continue
                 
+                is_proximate = check_keyboard_proximity(target, candidate)
+
                 results.append({
                     'Target_Ticker': target,
                     'Target_Name': target_name,
                     'Candidate_Ticker': candidate,
                     'Candidate_Name': candidate_name,
-                    'Distance': dist
+                    'Distance': dist,
+                    'Keyboard_Proximate': is_proximate
                 })
-                
-    return pd.DataFrame(results)
+    
+    # --- New Validation Step ---
+    if not results:
+        return pd.DataFrame(results)
+
+    print("Filtering candidates for data availability...")
+    # Extract unique candidates
+    initial_df = pd.DataFrame(results)
+    candidates_to_check = initial_df['Candidate_Ticker'].unique().tolist()
+    
+    # Validate
+    valid_candidates = validate_active_tickers(candidates_to_check)
+    
+    # Filter results
+    final_df = initial_df[initial_df['Candidate_Ticker'].isin(valid_candidates)]
+    
+    print(f"Removed {len(initial_df) - len(final_df)} candidates due to lack of data.")
+    
+    return final_df
 
 import os
 from datetime import datetime

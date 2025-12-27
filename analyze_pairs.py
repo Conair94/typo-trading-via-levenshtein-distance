@@ -154,6 +154,15 @@ def generate_summary_readme(df, data_dir):
     total_pairs = len(df)
     avg_best_corr = df['Best_Time_Corr'].mean()
     
+    # Keyboard Proximity Stats
+    if 'Keyboard_Proximate' in df.columns:
+        prox_df = df[df['Keyboard_Proximate'] == True]
+        prox_count = len(prox_df)
+        prox_avg_corr = prox_df['Best_Time_Corr'].mean() if not prox_df.empty else 0.0
+    else:
+        prox_count = 0
+        prox_avg_corr = 0.0
+    
     # Most common "Best Time"
     if 'Best_Time' in df.columns:
         common_times = df['Best_Time'].value_counts().head(3)
@@ -169,11 +178,23 @@ def generate_summary_readme(df, data_dir):
 1. **Market Open / Retail Action:** Large cap stocks with pre-market news often see "typo" stock correlation spike early in the trading day (09:30 - 10:00 AM) due to retail trader execution errors.
 2. **Buying Pressure:** Correlations are expected to be stronger when the target stock is experiencing positive returns (buying pressure), as FOMO drives rapid, error-prone entry.
 3. **Mean Reversion:** These correlations are temporary inefficiencies. As traders realize errors, the "typo" stock price should revert, making this a short-term mean-reversion play.
+4. **Keyboard Proximity:** Typos involving keys that are physically adjacent on a QWERTY keyboard (e.g., 'R' vs 'T') are more likely to be genuine execution errors, potentially offering a stronger correlation signal.
 
 ## Overview
 * **Total Pairs Analyzed:** {total_pairs}
 * **Focus:** Correlation of returns when Target stock is **Buying (Up)**.
-* **Average Max Correlation:** {avg_best_corr:.4f}
+* **Average Max Correlation (All):** {avg_best_corr:.4f}
+
+## Keyboard Proximity Analysis
+Comparing general Levenshtein distance matches vs. specific "fat finger" keyboard adjacency matches.
+
+| Metric | All Pairs | Keyboard Proximate Pairs |
+| :--- | :--- | :--- |
+| **Count** | {total_pairs} | {prox_count} |
+| **Avg Max Correlation** | {avg_best_corr:.4f} | {prox_avg_corr:.4f} |
+
+**Portfolio Hedging Note:**
+If "Keyboard Proximate" pairs demonstrate higher average correlation, they represent a higher-quality signal universe. In quantitative hedging, this allows for more efficient capital allocation—hedging the "typo" risk (or exploiting the mean reversion) with higher confidence and potentially lower basis risk.
 
 ## Time of Day Analysis
 **When is the correlation strongest?**
@@ -247,6 +268,7 @@ def main():
             res['Distance'] = row['Distance']
             res['Target_Name'] = row.get('Target_Name', 'N/A')
             res['Candidate_Name'] = row.get('Candidate_Name', 'N/A')
+            res['Keyboard_Proximate'] = row.get('Keyboard_Proximate', False)
             results.append(res)
             
     if results:
