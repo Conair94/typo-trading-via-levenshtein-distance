@@ -118,6 +118,10 @@ def analyze_intraday_correlation(target_df, candidate_df, target_ticker, candida
     # Get max correlation time slot
     best_time = bucket_corrs_buy.idxmax()
     max_corr = bucket_corrs_buy.max()
+    
+    # Calculate Correlation Lift (How much better is the specific time vs overall?)
+    # This supports the hypothesis that the effect is short-term/transient.
+    corr_lift = max_corr - overall_corr
 
     return {
         'Target': target_ticker,
@@ -125,6 +129,7 @@ def analyze_intraday_correlation(target_df, candidate_df, target_ticker, candida
         'Overall_Corr': overall_corr,
         'Best_Time': str(best_time),
         'Best_Time_Corr': max_corr,
+        'Correlation_Lift': corr_lift,
         # Also return correlation during that time slot for ALL moves (not just up) for context
         'General_Corr_At_Best_Time': bucket_corrs.get(best_time, np.nan)
     }
@@ -153,6 +158,11 @@ def generate_summary_readme(df, data_dir):
     content = f"""# Intraday Typo Analysis Summary (1-Minute Intervals)
 **Run Date:** {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
 **Data Period:** Last 5 Days (Intraday)
+
+## Hypotheses
+1. **Market Open / Retail Action:** Large cap stocks with pre-market news often see "typo" stock correlation spike early in the trading day (09:30 - 10:00 AM) due to retail trader execution errors.
+2. **Buying Pressure:** Correlations are expected to be stronger when the target stock is experiencing positive returns (buying pressure), as FOMO drives rapid, error-prone entry.
+3. **Mean Reversion:** These correlations are temporary inefficiencies. As traders realize errors, the "typo" stock price should revert, making this a short-term mean-reversion play.
 
 ## Overview
 * **Total Pairs Analyzed:** {total_pairs}
