@@ -210,6 +210,12 @@ def generate_summary_readme(df, data_dir):
         common_times_str = ", ".join([f"{t} ({c})" for t, c in common_times.items()])
     else:
         common_times_str = "N/A"
+
+    # Top 10 Positive
+    top_10 = df.sort_values(by='Best_Time_Corr', ascending=False).head(10)
+    
+    # Hedging Stats Summary
+    avg_alpha = top_10['Alpha_BasisPoints'].mean() if 'Alpha_BasisPoints' in top_10.columns else 0.0
     
     content = f"""# Intraday Typo Analysis Summary (1-Minute Intervals)
 **Run Date:** {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
@@ -226,6 +232,10 @@ def generate_summary_readme(df, data_dir):
 * **Focus:** Correlation of returns when Target stock is **Buying (Up)**.
 * **Average Max Correlation (All):** {avg_best_corr:.4f}
 
+## Time of Day Analysis
+**When is the correlation strongest?**
+* **Top Time Buckets:** {common_times_str}
+
 ## Keyboard Proximity Analysis
 Comparing general Levenshtein distance matches vs. specific "fat finger" keyboard adjacency matches.
 
@@ -237,31 +247,17 @@ Comparing general Levenshtein distance matches vs. specific "fat finger" keyboar
 **Portfolio Hedging Note:**
 If "Keyboard Proximate" pairs demonstrate higher average correlation, they represent a higher-quality signal universe. In quantitative hedging, this allows for more efficient capital allocation—hedging the "typo" risk (or exploiting the mean reversion) with higher confidence and potentially lower basis risk.
 
-## Time of Day Analysis
-**When is the correlation strongest?**
-* **Top Time Buckets:** {common_times_str}
+## Top 10 Correlated Pairs & Hedging Performance
+Simulating a **Long Target / Short Candidate** strategy (Hedge Ratio = Correlation) during the Best Time Bucket.
+*   **Average Alpha (Excess Return) for Top 10:** {avg_alpha:.2f} bps per minute
 
-## Top 10 Pairs with Highest Intraday Buying Pressure Correlation
+| Target | Name | Candidate | Name | Best Time | Buying Corr | Alpha (bps) | Hedged Sharpe |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 """
     # Helper to safe get string
     def safe_str(val):
         s = str(val)
         return s if s != 'nan' else 'N/A'
-
-    # Top 10 Positive
-    top_10 = df.sort_values(by='Best_Time_Corr', ascending=False).head(10)
-    
-    # Hedging Stats Summary
-    avg_alpha = top_10['Alpha_BasisPoints'].mean() if 'Alpha_BasisPoints' in top_10.columns else 0.0
-    
-    content += f"""
-## Theoretical Hedging Performance (Top 10 Pairs)
-Simulating a **Long Target / Short Candidate** strategy (Hedge Ratio = Correlation) during the Best Time Bucket.
-*   **Average Alpha (Excess Return):** {avg_alpha:.2f} bps per minute
-"""
-
-    content += "| Target | Name | Candidate | Name | Best Time | Buying Corr | Alpha (bps) | Hedged Sharpe |\n"
-    content += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
     
     for _, row in top_10.iterrows():
         t_name = safe_str(row.get('Target_Name', 'N/A'))
