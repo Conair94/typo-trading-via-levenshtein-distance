@@ -93,8 +93,8 @@ def analyze_intraday_correlation(target_df, candidate_df, target_ticker, candida
     df['Time_Bucket'] = df['Time'].apply(floor_time)
 
     # Define safe correlation helper to avoid RuntimeWarning for small/constant slices
-    def safe_corr(x):
-        if len(x) < 2:
+    def safe_corr(x, min_obs=10):
+        if len(x) < min_obs:
             return np.nan
         # Avoid warnings for constant values (if std is 0)
         if x['Target_Ret'].std() == 0 or x['Candidate_Ret'].std() == 0:
