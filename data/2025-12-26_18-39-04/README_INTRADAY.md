@@ -1,5 +1,5 @@
 # Intraday Typo Analysis Summary (1-Minute Intervals)
-**Run Date:** 2025-12-26 18:50:52
+**Run Date:** 2025-12-26 19:05:32
 **Data Period:** Last 5 Days (Intraday)
 
 ## Hypotheses
@@ -9,30 +9,29 @@
 4. **Keyboard Proximity:** Typos involving keys that are physically adjacent on a QWERTY keyboard (e.g., 'R' vs 'T') are more likely to be genuine execution errors, potentially offering a stronger correlation signal.
 
 ## Overview
-* **Total Pairs Analyzed:** 934
+* **Total Pairs Analyzed:** 937
 * **Focus:** Correlation of returns when Target stock is **Buying (Up)**.
-* **Average Max Correlation (All):** 0.2869
+* **Average Max Correlation (All):** 0.2865
+
+## Time of Day Analysis
+**When is the correlation strongest?**
+* **Top Time Buckets:** 14:30:00 (185), N/A (152), 15:30:00 (67)
 
 ## Keyboard Proximity Analysis
 Comparing general Levenshtein distance matches vs. specific "fat finger" keyboard adjacency matches.
 
 | Metric | All Pairs | Keyboard Proximate Pairs |
 | :--- | :--- | :--- |
-| **Count** | 934 | 109 |
-| **Avg Max Correlation** | 0.2869 | 0.2740 |
+| **Count** | 937 | 110 |
+| **Avg Max Correlation** | 0.2865 | 0.2730 |
 
 **Portfolio Hedging Note:**
 If "Keyboard Proximate" pairs demonstrate higher average correlation, they represent a higher-quality signal universe. In quantitative hedging, this allows for more efficient capital allocation—hedging the "typo" risk (or exploiting the mean reversion) with higher confidence and potentially lower basis risk.
 
-## Time of Day Analysis
-**When is the correlation strongest?**
-* **Top Time Buckets:** 14:30:00 (185), N/A (151), 15:30:00 (67)
-
-## Top 10 Pairs with Highest Intraday Buying Pressure Correlation
-
-## Theoretical Hedging Performance (Top 10 Pairs)
+## Top 10 Correlated Pairs & Hedging Performance
 Simulating a **Long Target / Short Candidate** strategy (Hedge Ratio = Correlation) during the Best Time Bucket.
-*   **Average Alpha (Excess Return):** -32.73 bps per minute
+*   **Average Alpha (Excess Return) for Top 10:** -32.73 bps per minute
+
 | Target | Name | Candidate | Name | Best Time | Buying Corr | Alpha (bps) | Hedged Sharpe |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | IBIT | iShares Bitcoin Trust ETF | ILIT | iShares Lithium Miners and Producers ETF | 14:30:00 | 0.9560 | -25.62 | -0.37 |
