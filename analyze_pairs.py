@@ -4,6 +4,7 @@ import sqlite3
 import numpy as np
 import os
 import sys
+import time
 from datetime import datetime, timedelta
 
 def get_latest_data_dir(base_dir="data"):
@@ -21,28 +22,29 @@ def load_candidates(file_path):
         print(f"File {file_path} not found.")
         return pd.DataFrame()
 
-def fetch_history(ticker, period="1y"):
+def fetch_history(ticker, period="5d", interval="1m"):
     """
-    Fetches historical data for a single ticker.
+    Fetches intraday historical data for a single ticker.
+    Default: Last 5 days, 1-minute interval.
     """
     try:
-        # download returns a DataFrame with MultiIndex columns if not flattened, 
-        # but for single ticker it's usually simple.
-        df = yf.download(ticker, period=period, progress=False)
+        # Rate limit protection
+        time.sleep(0.5) 
+        df = yf.download(ticker, period=period, interval=interval, progress=False)
         return df
     except Exception as e:
         print(f"Error fetching {ticker}: {e}")
         return pd.DataFrame()
 
-def analyze_correlation(target_df, candidate_df, target_ticker, candidate_ticker):
+def analyze_intraday_correlation(target_df, candidate_df, target_ticker, candidate_ticker):
     """
-    Analyzes correlation between target and candidate, specifically focusing on
-    high volume days of the target.
+    Analyzes intraday correlation, bucketed by time of day.
+    Focuses on 'Buying Pressure' (Target > 0).
     """
     if target_df.empty or candidate_df.empty:
         return None
 
-    # Helper to get series and handle multi-index
+    # Helper to get series
     def get_col(df, name):
         if name in df.columns:
             s = df[name]
@@ -51,140 +53,133 @@ def analyze_correlation(target_df, candidate_df, target_ticker, candidate_ticker
             return s
         return None
 
-    target_vol = get_col(target_df, 'Volume')
-    candidate_vol = get_col(candidate_df, 'Volume')
+    target_close = get_col(target_df, 'Close') # Intraday 'Adj Close' is same as 'Close'
+    candidate_close = get_col(candidate_df, 'Close')
     
-    target_close = get_col(target_df, 'Adj Close')
-    if target_close is None:
-        target_close = get_col(target_df, 'Close')
-
-    candidate_close = get_col(candidate_df, 'Adj Close')
-    if candidate_close is None:
-        candidate_close = get_col(candidate_df, 'Close')
-
-    if target_vol is None or candidate_vol is None or target_close is None or candidate_close is None:
+    if target_close is None or candidate_close is None:
         return None
 
-    # Create a combined dataframe
+    # Align timestamps (inner join)
     df = pd.DataFrame({
         'Target_Close': target_close,
-        'Target_Vol': target_vol,
-        'Candidate_Close': candidate_close,
-        'Candidate_Vol': candidate_vol
+        'Candidate_Close': candidate_close
     }).dropna()
 
     if df.empty:
         return None
 
-    # Calculate returns for the whole period
+    # Calculate 1-minute returns
     df['Target_Ret'] = df['Target_Close'].pct_change()
     df['Candidate_Ret'] = df['Candidate_Close'].pct_change()
-    
-    # Calculate baseline correlation
-    corr_all = df['Target_Ret'].corr(df['Candidate_Ret'])
-    
-    # Filter out pairs with implausibly high baseline correlation (likely derivatives or sector peers)
-    if abs(corr_all) > 0.9:
+    df = df.dropna()
+
+    # Filter: Baseline Check (Total Period)
+    # If the stocks track perfectly continuously (e.g. > 0.9), it's likely not a typo trade
+    overall_corr = df['Target_Ret'].corr(df['Candidate_Ret'])
+    if abs(overall_corr) > 0.9:
         return None
 
-    # Identify high volume days for Target (e.g., > 2 std dev above rolling mean)
-    # Using a 20-day rolling mean
-    df['Vol_Mean'] = df['Target_Vol'].rolling(window=20).mean()
-    df['Vol_Std'] = df['Target_Vol'].rolling(window=20).std()
-    df['High_Vol_Event'] = df['Target_Vol'] > (df['Vol_Mean'] + 2 * df['Vol_Std'])
-
-    high_vol_days = df[df['High_Vol_Event']]
+    # Add Time Buckets (30 min intervals)
+    # df.index is DatetimeIndex. 
+    # We want strictly the time component (09:30, 10:00...)
+    df['Time'] = df.index.time
     
-    if high_vol_days.empty:
+    # Bucket logic: Round down to nearest 30 mins
+    def floor_time(t):
+        minutes = t.minute
+        floored_min = (minutes // 30) * 30
+        return t.replace(minute=floored_min, second=0, microsecond=0)
+
+    df['Time_Bucket'] = df['Time'].apply(floor_time)
+
+    # Calculate Correlation per Bucket
+    # We aggregate all days (5 days) into these time slots
+    bucket_corrs = df.groupby('Time_Bucket').apply(
+        lambda x: x['Target_Ret'].corr(x['Candidate_Ret'])
+    )
+    
+    # Calculate "Buying Pressure" Correlation (Target Returns > 0) per bucket
+    bucket_corrs_buy = df[df['Target_Ret'] > 0].groupby('Time_Bucket').apply(
+        lambda x: x['Target_Ret'].corr(x['Candidate_Ret'])
+    )
+
+    # Find the Best Time Bucket (Max Correlation)
+    # We focus on the "Buying Pressure" scenario as requested
+    if bucket_corrs_buy.empty or bucket_corrs_buy.isna().all():
         return {
             'Target': target_ticker,
             'Candidate': candidate_ticker,
-            'Correlation_All': corr_all,
-            'High_Vol_Count': 0,
-            'Correlation_High_Vol': None
+            'Overall_Corr': overall_corr,
+            'Best_Time': "N/A",
+            'Best_Time_Corr': 0.0,
+            'Buying_Pressure_Corr_All': df[df['Target_Ret'] > 0]['Target_Ret'].corr(df[df['Target_Ret'] > 0]['Candidate_Ret'])
         }
-
-    # Correlation specifically on the high volume days
-    # (Note: Sample size might be small)
-    high_vol_corr = df.loc[df['High_Vol_Event'], 'Target_Ret'].corr(df.loc[df['High_Vol_Event'], 'Candidate_Ret'])
+        
+    # Get max correlation time slot
+    best_time = bucket_corrs_buy.idxmax()
+    max_corr = bucket_corrs_buy.max()
 
     return {
         'Target': target_ticker,
         'Candidate': candidate_ticker,
-        'Correlation_All': corr_all,
-        'High_Vol_Count': len(high_vol_days),
-        'Correlation_High_Vol': high_vol_corr
+        'Overall_Corr': overall_corr,
+        'Best_Time': str(best_time),
+        'Best_Time_Corr': max_corr,
+        # Also return correlation during that time slot for ALL moves (not just up) for context
+        'General_Corr_At_Best_Time': bucket_corrs.get(best_time, np.nan)
     }
 
 def save_to_db(results, db_path):
     conn = sqlite3.connect(db_path)
     df = pd.DataFrame(results)
-    df.to_sql("correlation_study", conn, if_exists="replace", index=False)
+    df.to_sql("intraday_study", conn, if_exists="replace", index=False)
     conn.close()
     print(f"Results saved to SQLite database: {db_path}")
 
 def generate_summary_readme(df, data_dir):
-    readme_path = os.path.join(data_dir, "README.md")
+    readme_path = os.path.join(data_dir, "README_INTRADAY.md")
     
     # Calculate stats
     total_pairs = len(df)
+    avg_best_corr = df['Best_Time_Corr'].mean()
     
-    # Baseline stats
-    avg_corr_all = df['Correlation_All'].mean()
-    std_corr_all = df['Correlation_All'].std()
+    # Most common "Best Time"
+    if 'Best_Time' in df.columns:
+        common_times = df['Best_Time'].value_counts().head(3)
+        common_times_str = ", ".join([f"{t} ({c})" for t, c in common_times.items()])
+    else:
+        common_times_str = "N/A"
     
-    # High Vol stats (filter for non-null)
-    high_vol_series = df['Correlation_High_Vol'].dropna()
-    avg_corr_hv = high_vol_series.mean() if not high_vol_series.empty else np.nan
-    std_corr_hv = high_vol_series.std() if not high_vol_series.empty else np.nan
-    count_hv = len(high_vol_series)
-    
-    content = f"""# Analysis Summary
+    content = f"""# Intraday Typo Analysis Summary (1-Minute Intervals)
 **Run Date:** {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+**Data Period:** Last 5 Days (Intraday)
 
 ## Overview
 * **Total Pairs Analyzed:** {total_pairs}
-* **Pairs with High Volume Events:** {count_hv} ({count_hv/total_pairs*100:.1f}%)
+* **Focus:** Correlation of returns when Target stock is **Buying (Up)**.
+* **Average Max Correlation:** {avg_best_corr:.4f}
 
-## Statistical Metrics
+## Time of Day Analysis
+**When is the correlation strongest?**
+* **Top Time Buckets:** {common_times_str}
 
-### Baseline Correlation (All Days)
-* **Mean:** {avg_corr_all:.4f}
-* **Std Dev:** {std_corr_all:.4f}
-
-### High Volume Event Correlation
-* **Mean:** {avg_corr_hv:.4f}
-* **Std Dev:** {std_corr_hv:.4f}
-
-## Top 5 Positively Correlated Pairs (High Volume Events)
+## Top 10 Pairs with Highest Intraday Buying Pressure Correlation
 """
     # Helper to safe get string
     def safe_str(val):
         s = str(val)
         return s if s != 'nan' else 'N/A'
 
-    # Top 5 Positive
-    if not high_vol_series.empty:
-        top_5 = df.sort_values(by='Correlation_High_Vol', ascending=False).head(5)
-        content += "| Target (Ticker) | Target Name | Candidate (Ticker) | Candidate Name | Distance | High Vol Corr | Baseline Corr |\n"
-        content += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
-        for _, row in top_5.iterrows():
-            t_name = safe_str(row.get('Target_Name', 'N/A'))
-            c_name = safe_str(row.get('Candidate_Name', 'N/A'))
-            content += f"| {row['Target']} | {t_name} | {row['Candidate']} | {c_name} | {row['Distance']} | {row['Correlation_High_Vol']:.4f} | {row['Correlation_All']:.4f} |\n"
-    else:
-        content += "No high volume events found.\n"
-        
-    content += "\n## Top 5 Negatively Correlated Pairs (High Volume Events)\n"
-    if not high_vol_series.empty:
-        bot_5 = df.sort_values(by='Correlation_High_Vol', ascending=True).head(5)
-        content += "| Target (Ticker) | Target Name | Candidate (Ticker) | Candidate Name | Distance | High Vol Corr | Baseline Corr |\n"
-        content += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
-        for _, row in bot_5.iterrows():
-            t_name = safe_str(row.get('Target_Name', 'N/A'))
-            c_name = safe_str(row.get('Candidate_Name', 'N/A'))
-            content += f"| {row['Target']} | {t_name} | {row['Candidate']} | {c_name} | {row['Distance']} | {row['Correlation_High_Vol']:.4f} | {row['Correlation_All']:.4f} |\n"
-
+    # Top 10 Positive
+    top_10 = df.sort_values(by='Best_Time_Corr', ascending=False).head(10)
+    
+    content += "| Target | Name | Candidate | Name | Best Time | Buying Corr (Best Time) | Overall Corr |\n"
+    content += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
+    
+    for _, row in top_10.iterrows():
+        t_name = safe_str(row.get('Target_Name', 'N/A'))
+        c_name = safe_str(row.get('Candidate_Name', 'N/A'))
+        content += f"| {row['Target']} | {t_name} | {row['Candidate']} | {c_name} | {row['Best_Time']} | {row['Best_Time_Corr']:.4f} | {row['Overall_Corr']:.4f} |\n"
 
     with open(readme_path, "w") as f:
         f.write(content)
@@ -214,11 +209,9 @@ def main():
 
     results = []
     
-    # Iterate through unique pairs
     total_pairs = len(df_candidates)
-    print(f"Analyzing {total_pairs} pairs...")
+    print(f"Analyzing {total_pairs} pairs (Intraday 1m)...")
     
-    # Cache data to avoid re-downloading same target multiple times
     data_cache = {}
 
     for idx, row in df_candidates.iterrows():
@@ -227,33 +220,28 @@ def main():
         
         print(f"Processing {idx+1}/{total_pairs}: {target} vs {candidate}")
         
-        # Fetch Target Data
         if target not in data_cache:
             data_cache[target] = fetch_history(target)
         
-        # Fetch Candidate Data
         if candidate not in data_cache:
             data_cache[candidate] = fetch_history(candidate)
             
-        res = analyze_correlation(data_cache[target], data_cache[candidate], target, candidate)
+        res = analyze_intraday_correlation(data_cache[target], data_cache[candidate], target, candidate)
         if res:
             res['Distance'] = row['Distance']
-            # Pass through names if available
             res['Target_Name'] = row.get('Target_Name', 'N/A')
             res['Candidate_Name'] = row.get('Candidate_Name', 'N/A')
             results.append(res)
             
-    # Save results to the same directory
     if results:
         db_path = os.path.join(data_dir, "typo_trading.db")
         save_to_db(results, db_path)
         
-        csv_path = os.path.join(data_dir, "study_results.csv")
+        csv_path = os.path.join(data_dir, "intraday_results.csv")
         df_results = pd.DataFrame(results)
         df_results.to_csv(csv_path, index=False)
         print(f"Results saved to {csv_path}")
         
-        # Generate Summary
         generate_summary_readme(df_results, data_dir)
     else:
         print("No results generated.")
