@@ -158,23 +158,32 @@ def generate_summary_readme(df, data_dir):
 
 ## Top 5 Positively Correlated Pairs (High Volume Events)
 """
+    # Helper to safe get string
+    def safe_str(val):
+        s = str(val)
+        return s if s != 'nan' else 'N/A'
+
     # Top 5 Positive
     if not high_vol_series.empty:
         top_5 = df.sort_values(by='Correlation_High_Vol', ascending=False).head(5)
-        content += "| Target | Candidate | Distance | High Vol Corr | Baseline Corr |\n"
-        content += "| :--- | :--- | :--- | :--- | :--- |\n"
+        content += "| Target (Ticker) | Target Name | Candidate (Ticker) | Candidate Name | Distance | High Vol Corr | Baseline Corr |\n"
+        content += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
         for _, row in top_5.iterrows():
-            content += f"| {row['Target']} | {row['Candidate']} | {row['Distance']} | {row['Correlation_High_Vol']:.4f} | {row['Correlation_All']:.4f} |\n"
+            t_name = safe_str(row.get('Target_Name', 'N/A'))
+            c_name = safe_str(row.get('Candidate_Name', 'N/A'))
+            content += f"| {row['Target']} | {t_name} | {row['Candidate']} | {c_name} | {row['Distance']} | {row['Correlation_High_Vol']:.4f} | {row['Correlation_All']:.4f} |\n"
     else:
         content += "No high volume events found.\n"
         
     content += "\n## Top 5 Negatively Correlated Pairs (High Volume Events)\n"
     if not high_vol_series.empty:
         bot_5 = df.sort_values(by='Correlation_High_Vol', ascending=True).head(5)
-        content += "| Target | Candidate | Distance | High Vol Corr | Baseline Corr |\n"
-        content += "| :--- | :--- | :--- | :--- | :--- |\n"
+        content += "| Target (Ticker) | Target Name | Candidate (Ticker) | Candidate Name | Distance | High Vol Corr | Baseline Corr |\n"
+        content += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
         for _, row in bot_5.iterrows():
-            content += f"| {row['Target']} | {row['Candidate']} | {row['Distance']} | {row['Correlation_High_Vol']:.4f} | {row['Correlation_All']:.4f} |\n"
+            t_name = safe_str(row.get('Target_Name', 'N/A'))
+            c_name = safe_str(row.get('Candidate_Name', 'N/A'))
+            content += f"| {row['Target']} | {t_name} | {row['Candidate']} | {c_name} | {row['Distance']} | {row['Correlation_High_Vol']:.4f} | {row['Correlation_All']:.4f} |\n"
 
 
     with open(readme_path, "w") as f:
@@ -229,6 +238,9 @@ def main():
         res = analyze_correlation(data_cache[target], data_cache[candidate], target, candidate)
         if res:
             res['Distance'] = row['Distance']
+            # Pass through names if available
+            res['Target_Name'] = row.get('Target_Name', 'N/A')
+            res['Candidate_Name'] = row.get('Candidate_Name', 'N/A')
             results.append(res)
             
     # Save results to the same directory

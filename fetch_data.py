@@ -148,12 +148,15 @@ def calculate_distances(target_tickers, all_tickers_dict, threshold=1):
             if dist <= threshold:
                 # Check for intentional correlation
                 candidate_name = all_tickers_dict.get(candidate, "")
+                target_name = all_tickers_dict.get(target, "")
+                
                 if is_correlated_by_design(target, candidate, candidate_name):
                     # print(f"Skipping correlated pair: {target} vs {candidate} ({candidate_name})")
                     continue
                 
                 results.append({
                     'Target_Ticker': target,
+                    'Target_Name': target_name,
                     'Candidate_Ticker': candidate,
                     'Candidate_Name': candidate_name,
                     'Distance': dist
