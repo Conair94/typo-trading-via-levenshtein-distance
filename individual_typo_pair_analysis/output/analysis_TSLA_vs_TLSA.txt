@@ -1,0 +1,49 @@
+
+==================================================
+  INDIVIDUAL TYPO ANALYSIS: TSLA vs TLSA
+==================================================
+Data Points: 813 (7 trading days)
+Overall Correlation: 0.0490
+Buying Pressure Correlation (Target > 0): 0.0532
+
+--- Time of Day Analysis (Hypothesis 1) ---
+Correlation by 30m Bucket:
+Time_Bucket
+14:30:00    0.040644
+15:00:00    0.002483
+15:30:00    0.010328
+16:00:00    0.062538
+16:30:00   -0.034238
+17:00:00    0.086330
+17:30:00    0.119594
+18:00:00    0.007924
+18:30:00    0.125403
+19:00:00    0.468070
+19:30:00    0.019757
+20:00:00    0.137499
+20:30:00    0.152855
+
+--- Buying Pressure by Time (Hypothesis 2) ---
+Correlation when Target is Up, by Bucket:
+Time_Bucket
+14:30:00    0.109984
+15:00:00   -0.162498
+15:30:00   -0.157355
+16:00:00    0.038868
+16:30:00    0.341336
+17:00:00   -0.031463
+17:30:00    0.297072
+18:00:00    0.271820
+18:30:00   -0.169801
+19:00:00    0.133044
+19:30:00   -0.200217
+20:00:00   -0.125533
+20:30:00    0.145647
+
+--- Alpha Generation (Best Time: 16:30:00) ---
+Simulated Strategy: Long TSLA / Short TLSA
+Hedge Ratio: 0.34
+Alpha (Excess Return): 4.83 bps per interval
+Volatility Reduction: -68.53%
+Sharpe Ratio Improvement: -0.0864 -> 0.1117
+==================================================
