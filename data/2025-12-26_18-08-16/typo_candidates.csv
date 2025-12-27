@@ -1,0 +1,881 @@
+Target_Ticker,Target_Name,Candidate_Ticker,Candidate_Name,Distance
+PCLA,PicoCELA Inc. - American Depositary Shares,PCSA,"Processa Pharmaceuticals, Inc. - Common Stock",1
+PCLA,PicoCELA Inc. - American Depositary Shares,POLA,"Polar Power, Inc. - Common Stock",1
+PCLA,PicoCELA Inc. - American Depositary Shares,PVLA,"Palvella Therapeutics, Inc. - Common Stock",1
+SOXS,Direxion Daily Semiconductor Bear 3X Shares,SOLS,Solstice Advanced Materials Inc. - Common Stock,1
+SOXS,Direxion Daily Semiconductor Bear 3X Shares,SIXS,ETC 6 Meridian Small Cap Equity ETF,1
+SOXS,Direxion Daily Semiconductor Bear 3X Shares,SPXS,Direxion Daily S&P 500 Bear 3X,1
+SOXS,Direxion Daily Semiconductor Bear 3X Shares,STXS,"Stereotaxis, Inc. Common Stock",1
+NVDA,NVIDIA Corporation - Common Stock,IVDA,"Iveda Solutions, Inc. - Common Stock",1
+NVDA,NVIDIA Corporation - Common Stock,VNDA,Vanda Pharmaceuticals Inc. - Common Stock,1
+SIDU,"Sidus Space, Inc. - Class A Common Stock",BIDU,"Baidu, Inc. - American Depositary Shares, each representing 8 ordinary share",1
+SIDU,"Sidus Space, Inc. - Class A Common Stock",FIDU,Fidelity MSCI Industrials Index ETF,1
+SIDU,"Sidus Space, Inc. - Class A Common Stock",IDU,iShares U.S. Utilities ETF,1
+SIDU,"Sidus Space, Inc. - Class A Common Stock",MIDU,Direxion Mid Cap Bull 3X Shares,1
+SIDU,"Sidus Space, Inc. - Class A Common Stock",SID,Companhia Siderurgica Nacional S.A. Common Stock,1
+DVLT,Datavault AI Inc. - Common Stock,CVLT,"Commvault Systems, Inc. - Common Stock",1
+DVLT,Datavault AI Inc. - Common Stock,VLT,Invesco High Income Trust II,1
+BBAI,"BigBear.ai, Inc. Common Stock",BBGI,"Beasley Broadcast Group, Inc. - Class A Common Stock",1
+BBAI,"BigBear.ai, Inc. Common Stock",BBSI,"Barrett Business Services, Inc. - Common Stock",1
+BBAI,"BigBear.ai, Inc. Common Stock",BNAI,Brand Engagement Network Inc. - Common Stock,1
+BBAI,"BigBear.ai, Inc. Common Stock",BTAI,"BioXcel Therapeutics, Inc. - Common Stock",1
+BBAI,"BigBear.ai, Inc. Common Stock",BZAI,"Blaize Holdings, Inc. - Common Stock",1
+BBAI,"BigBear.ai, Inc. Common Stock",MBAI,Check-Cap Ltd. - Ordinary Share,1
+BBAI,"BigBear.ai, Inc. Common Stock",ZBAI,ATIF Holdings Limited - Ordinary Shares,1
+BBAI,"BigBear.ai, Inc. Common Stock",BAI,iShares A.I. Innovation and Tech Active ETF,1
+BBAI,"BigBear.ai, Inc. Common Stock",BBAR,Banco BBVA Argentina S.A. ADS,1
+BBAI,"BigBear.ai, Inc. Common Stock",BBWI,"Bath & Body Works, Inc.",1
+PLUG,"Plug Power, Inc. - Common Stock",PLUR,Pluri Inc. - Common Stock,1
+PLUG,"Plug Power, Inc. - Common Stock",PLUS,ePlus inc. - Common Stock,1
+PLUG,"Plug Power, Inc. - Common Stock",PAUG,Innovator U.S. Equity Power Buffer ETF - August,1
+PLUG,"Plug Power, Inc. - Common Stock",PLAG,Planet Green Holdings Corp. Common Stock,1
+BYND,"Beyond Meat, Inc. - Common stock",BAND,Bandwidth Inc. - Class A Common Stock,1
+BYND,"Beyond Meat, Inc. - Common stock",BND,Vanguard Total Bond Market ETF,1
+BYND,"Beyond Meat, Inc. - Common stock",BLND,"Blend Labs, Inc. Class A Common Stock",1
+BYND,"Beyond Meat, Inc. - Common stock",BOND,PIMCO Active Bond Exchange-Traded Fund Exchange-Traded Fund,1
+BYND,"Beyond Meat, Inc. - Common stock",BYD,Boyd Gaming Corporation Common Stock,1
+BYND,"Beyond Meat, Inc. - Common stock",MYND,"Mynd.ai, Inc. American Depositary Shares",1
+TSLA,"Tesla, Inc.  - Common Stock",ESLA,"Estrella Immunopharma, Inc. - Common Stock",1
+TSLA,"Tesla, Inc.  - Common Stock",TBLA,Taboola.com Ltd. - Ordinary Shares,1
+TSLA,"Tesla, Inc.  - Common Stock",TELA,"TELA Bio, Inc. - Common stock",1
+TSLA,"Tesla, Inc.  - Common Stock",TLSA,Tiziana Life Sciences Ltd - Common Shares,1
+TSLA,"Tesla, Inc.  - Common Stock",TSHA,"Taysha Gene Therapies, Inc. - Common Stock",1
+TSLA,"Tesla, Inc.  - Common Stock",STLA,Stellantis N.V. Common Shares,1
+TSLA,"Tesla, Inc.  - Common Stock",TSLX,"Sixth Street Specialty Lending, Inc. Common Stock",1
+TSLL,Direxion Daily TSLA Bull 2X Shares,TSLA,"Tesla, Inc.  - Common Stock",1
+TSLL,Direxion Daily TSLA Bull 2X Shares,TBLL,Invesco Short Term Treasury ETF,1
+TSLL,Direxion Daily TSLA Bull 2X Shares,TILL,Teucrium Agricultural Strategy No K-1 ETF,1
+TSLL,Direxion Daily TSLA Bull 2X Shares,TOLL,Tema Monopolies and Oligopolies ETF,1
+TSLL,Direxion Daily TSLA Bull 2X Shares,TSLX,"Sixth Street Specialty Lending, Inc. Common Stock",1
+ONDS,Ondas Holdings Inc. - Common Stock,ODDS,Pacer BlueStar Digital Entertainment ETF,1
+ONDS,Ondas Holdings Inc. - Common Stock,BNDS,Infrastructure Capital Bond Income ETF,1
+ONDS,Ondas Holdings Inc. - Common Stock,INDS,Pacer Industrial Real Estate ETF,1
+IVP,"Inspire Veterinary Partners, Inc. - Class A Common Stock",IEP,Icahn Enterprises L.P. - Depositary Units representing Limited Partner Interests,1
+IVP,"Inspire Veterinary Partners, Inc. - Class A Common Stock",IVF,"INVO Fertility, Inc. - Common Stock",1
+IVP,"Inspire Veterinary Partners, Inc. - Class A Common Stock",DIVP,Cullen Enhanced Equity Income ETF,1
+IVP,"Inspire Veterinary Partners, Inc. - Class A Common Stock",IBP,"Installed Building Products, Inc. Common Stock",1
+IVP,"Inspire Veterinary Partners, Inc. - Class A Common Stock",IP,International Paper Company Common Stock,1
+IVP,"Inspire Veterinary Partners, Inc. - Class A Common Stock",ITP,"IT Tech Packaging, Inc. Common Stock",1
+IVP,"Inspire Veterinary Partners, Inc. - Class A Common Stock",IVR,INVESCO MORTGAGE CAPITAL INC Common Stock,1
+IVP,"Inspire Veterinary Partners, Inc. - Class A Common Stock",IVZ,Invesco Ltd Common Stock,1
+IVP,"Inspire Veterinary Partners, Inc. - Class A Common Stock",IWP,iShares Russell Midcap Growth ETF,1
+IVP,"Inspire Veterinary Partners, Inc. - Class A Common Stock",IXP,iShares Global Comm Services ETF,1
+IVP,"Inspire Veterinary Partners, Inc. - Class A Common Stock",RVP,"Retractable Technologies, Inc. Common Stock",1
+INTC,Intel Corporation - Common Stock,BNTC,Benitec Biopharma Inc. - Common Stock,1
+INTC,Intel Corporation - Common Stock,INTA,"Intapp, Inc. - Common Stock",1
+INTC,Intel Corporation - Common Stock,INTG,The Intergroup Corporation - Common Stock,1
+INTC,Intel Corporation - Common Stock,INTS,"Intensity Therapeutics, Inc. - Common Stock",1
+INTC,Intel Corporation - Common Stock,INTU,Intuit Inc. - Common Stock,1
+INTC,Intel Corporation - Common Stock,INTZ,Intrusion Inc. - Common Stock,1
+INTC,Intel Corporation - Common Stock,IRTC,"iRhythm Technologies, Inc. - Common Stock",1
+INTC,Intel Corporation - Common Stock,IETC,iShares U.S. Tech Independence Focused ETF,1
+INTC,Intel Corporation - Common Stock,INTT,inTest Corporation Common Stock,1
+VMAR,Vision Marine Technologies Inc. - Common Shares,MAR,Marriott International - Class A Common Stock,1
+VMAR,Vision Marine Technologies Inc. - Common Shares,VRAR,"The Glimpse Group, Inc. - Common Stock",1
+VMAR,Vision Marine Technologies Inc. - Common Shares,BMAR,Innovator U.S. Equity Buffer ETF - March,1
+VMAR,Vision Marine Technologies Inc. - Common Shares,DMAR,FT Vest U.S. Equity Deep Buffer ETF - March,1
+VMAR,Vision Marine Technologies Inc. - Common Shares,FMAR,FT Vest U.S. Equity Buffer ETF - March,1
+VMAR,Vision Marine Technologies Inc. - Common Shares,GMAR,FT Vest U.S. Equity Moderate Buffer ETF - March,1
+VMAR,Vision Marine Technologies Inc. - Common Shares,IMAR,Innovator International Developed Power Buffer ETF  March,1
+VMAR,Vision Marine Technologies Inc. - Common Shares,KMAR,Innovator U.S. Small Cap Power Buffer ETF - March,1
+VMAR,Vision Marine Technologies Inc. - Common Shares,NMAR,Innovator Growth-100 Power Buffer ETF - March,1
+VMAR,Vision Marine Technologies Inc. - Common Shares,PMAR,Innovator U.S. Equity Power Buffer ETF - March,1
+VMAR,Vision Marine Technologies Inc. - Common Shares,QMAR,FT Vest Nasdaq-100 Buffer ETF - March,1
+VMAR,Vision Marine Technologies Inc. - Common Shares,TMAR,FT Vest Emerging Markets Buffer ETF - March,1
+VMAR,Vision Marine Technologies Inc. - Common Shares,UMAR,Innovator U.S. Equity Ultra Buffer ETF - March,1
+VMAR,Vision Marine Technologies Inc. - Common Shares,XMAR,FT Vest U.S. Equity Enhance & Moderate Buffer ETF - March,1
+VMAR,Vision Marine Technologies Inc. - Common Shares,YMAR,FT Vest International Equity Moderate Buffer ETF - March,1
+VMAR,Vision Marine Technologies Inc. - Common Shares,ZMAR,Innovator Equity Defined Protection ETF - 1 Yr March,1
+WBD,"Warner Bros. Discovery, Inc. - Series A Common Stock",WRD,WeRide Inc. - American Depositary Shares,1
+WBD,"Warner Bros. Discovery, Inc. - Series A Common Stock",WWD,"Woodward, Inc. - Common Stock",1
+WBD,"Warner Bros. Discovery, Inc. - Series A Common Stock",BBD,Banco Bradesco Sa American Depositary Shares,1
+WBD,"Warner Bros. Discovery, Inc. - Series A Common Stock",DBD,Diebold Nixdorf Incorporated Common stock,1
+WBD,"Warner Bros. Discovery, Inc. - Series A Common Stock",IBD,Inspire Corporate Bond ETF,1
+WBD,"Warner Bros. Discovery, Inc. - Series A Common Stock",PBD,Invesco Global Clean Energy ETF,1
+WBD,"Warner Bros. Discovery, Inc. - Series A Common Stock",WBS,Webster Financial Corporation Common Stock,1
+WBD,"Warner Bros. Discovery, Inc. - Series A Common Stock",WD,"Walker & Dunlop, Inc Common Stock",1
+WBD,"Warner Bros. Discovery, Inc. - Series A Common Stock",WHD,"Cactus, Inc. Class A Common Stock",1
+WOK,WORK Medical Technology Group LTD - Class A Ordinary Shares,AOK,iShares Core 30/70 Conservative Allocation ETF,1
+WOK,WORK Medical Technology Group LTD - Class A Ordinary Shares,NOK,Nokia Corporation Sponsored American Depositary Shares,1
+WOK,WORK Medical Technology Group LTD - Class A Ordinary Shares,ROK,"Rockwell Automation, Inc. Common Stock",1
+WOK,WORK Medical Technology Group LTD - Class A Ordinary Shares,TOK,iShares MSCI Kokusai ETF,1
+WOK,WORK Medical Technology Group LTD - Class A Ordinary Shares,WK,Workiva Inc. Class A Common Stock,1
+WOK,WORK Medical Technology Group LTD - Class A Ordinary Shares,WLK,Westlake Corporation Common Stock,1
+WOK,WORK Medical Technology Group LTD - Class A Ordinary Shares,WMK,"Weis Markets, Inc. Common Stock",1
+WOK,WORK Medical Technology Group LTD - Class A Ordinary Shares,WOW,"WideOpenWest, Inc. Common Stock",1
+AAPL,Apple Inc. - Common Stock,AAL,"American Airlines Group, Inc. - Common Stock",1
+AAPL,Apple Inc. - Common Stock,AMPL,"Amplitude, Inc. - Class A Common Stock",1
+AAPL,Apple Inc. - Common Stock,AAP,Advance Auto Parts Inc.,1
+AAPL,Apple Inc. - Common Stock,CAPL,CrossAmerica Partners LP Common Units representing limited partner interests,1
+AAPL,Apple Inc. - Common Stock,PAPL,Pineapple Financial Inc. Common Stock,1
+FOLD,"Amicus Therapeutics, Inc. - Common Stock",BOLD,"Boundless Bio, Inc. - Common Stock",1
+FOLD,"Amicus Therapeutics, Inc. - Common Stock",COLD,"Americold Realty Trust, Inc. Common Stock",1
+FOLD,"Amicus Therapeutics, Inc. - Common Stock",FCLD,Fidelity Cloud Computing ETF,1
+FOLD,"Amicus Therapeutics, Inc. - Common Stock",FYLD,Cambria Foreign Shareholder Yield ETF,1
+FOLD,"Amicus Therapeutics, Inc. - Common Stock",GOLD,"Gold.com, Inc. Common Stock",1
+FOLD,"Amicus Therapeutics, Inc. - Common Stock",HOLD,Harbor Alpha Layering ETF,1
+FOLD,"Amicus Therapeutics, Inc. - Common Stock",KOLD,ProShares UltraShort Bloomberg Natural Gas,1
+TQQQ,ProShares UltraPro QQQ,GQQQ,Astoria US Quality Growth Kings ETF,1
+TQQQ,ProShares UltraPro QQQ,IQQQ,ProShares Nasdaq-100 High Income ETF,1
+TQQQ,ProShares UltraPro QQQ,KQQQ,Kurv Technology Titans Select ETF,1
+TQQQ,ProShares UltraPro QQQ,MQQQ,Tradr 2X Long Innovation 100 Monthly ETF,1
+TQQQ,ProShares UltraPro QQQ,QQQ,"Invesco QQQ Trust, Series 1",1
+TQQQ,ProShares UltraPro QQQ,SQQQ,ProShares UltraPro Short QQQ,1
+TQQQ,ProShares UltraPro QQQ,YQQQ,YieldMax Short N100 Option Income Strategy ETF,1
+TQQQ,ProShares UltraPro QQQ,CQQQ,Invesco China Technology ETF,1
+ASST,"Strive, Inc. - Class A Common Stock",AMST,Amesite Inc. - Common Stock,1
+ASST,"Strive, Inc. - Class A Common Stock",AQST,"Aquestive Therapeutics, Inc. - Common Stock",1
+ASST,"Strive, Inc. - Class A Common Stock",ASRT,"Assertio Holdings, Inc. - Common Stock",1
+ASST,"Strive, Inc. - Class A Common Stock",ASTS,"AST SpaceMobile, Inc. - Class A Common Stock",1
+ASST,"Strive, Inc. - Class A Common Stock",AUST,Austin Gold Corp. Common Shares,1
+ASST,"Strive, Inc. - Class A Common Stock",GSST,Goldman Sachs Ultra Short Bond ETF,1
+ASST,"Strive, Inc. - Class A Common Stock",MSST,YieldMax MSTR Performance & Distribution Target 25 ETF,1
+ASST,"Strive, Inc. - Class A Common Stock",RSST,Return Stacked U.S. Stocks & Managed Futures ETF,1
+ASST,"Strive, Inc. - Class A Common Stock",SST,"System1, Inc. Class A Common Stock",1
+AVGO,Broadcom Inc. - Common Stock,ANGO,"AngioDynamics, Inc. - Common Stock",1
+AVGO,Broadcom Inc. - Common Stock,AUGO,Aura Minerals Inc. - Common Shares,1
+AVGO,Broadcom Inc. - Common Stock,AVO,"Mission Produce, Inc. - Common Stock",1
+AVGO,Broadcom Inc. - Common Stock,EVGO,EVgo Inc. - Common Stock,1
+AVGO,Broadcom Inc. - Common Stock,AGO,Assured Guaranty Ltd. Common Stock,1
+AAL,"American Airlines Group, Inc. - Common Stock",AAPL,Apple Inc. - Common Stock,1
+AAL,"American Airlines Group, Inc. - Common Stock",ABL,"Abacus Global Management, Inc. - Class A Common Stock",1
+AAL,"American Airlines Group, Inc. - Common Stock",AMAL,Amalgamated Financial Corp. - Common Stock,1
+AAL,"American Airlines Group, Inc. - Common Stock",ANL,Adlai Nortye Ltd. - American Depositary Shares,1
+AAL,"American Airlines Group, Inc. - Common Stock",AVL,Direxion Daily AVGO Bull 2X Shares,1
+AAL,"American Airlines Group, Inc. - Common Stock",PAL,"Proficient Auto Logistics, Inc. - Common Stock",1
+AAL,"American Airlines Group, Inc. - Common Stock",UAL,"United Airlines Holdings, Inc. - Common Stock",1
+AAL,"American Airlines Group, Inc. - Common Stock",AA,Alcoa Corporation Common Stock ,1
+AAL,"American Airlines Group, Inc. - Common Stock",AAP,Advance Auto Parts Inc.,1
+AAL,"American Airlines Group, Inc. - Common Stock",AFL,AFLAC Incorporated Common Stock,1
+AAL,"American Airlines Group, Inc. - Common Stock",AGL,"agilon health, inc. Common Stock",1
+AAL,"American Airlines Group, Inc. - Common Stock",AHL,Aspen Insurance Holdings Limited Class A Ordinary Shares,1
+AAL,"American Airlines Group, Inc. - Common Stock",AL,Air Lease Corporation Class A Common Stock,1
+AAL,"American Airlines Group, Inc. - Common Stock",ALL,Allstate Corporation (The) Common Stock,1
+AAL,"American Airlines Group, Inc. - Common Stock",ARL,"American Realty Investors, Inc. Common Stock",1
+AAL,"American Airlines Group, Inc. - Common Stock",AVAL,Grupo Aval Acciones y Valores S.A. ADR (Each representing 20 preferred shares),1
+AAL,"American Airlines Group, Inc. - Common Stock",AXL,"American Axle & Manufacturing Holdings, Inc. Common Stock",1
+AAL,"American Airlines Group, Inc. - Common Stock",CAL,"Caleres, Inc. Common Stock",1
+AAL,"American Airlines Group, Inc. - Common Stock",DAL,"Delta Air Lines, Inc. Common Stock",1
+AAL,"American Airlines Group, Inc. - Common Stock",GAL,State Street Global Allocation ETF,1
+AAL,"American Airlines Group, Inc. - Common Stock",HAL,Halliburton Company Common Stock,1
+AAL,"American Airlines Group, Inc. - Common Stock",RAL,Ralliant Corporation Common Stock,1
+AAL,"American Airlines Group, Inc. - Common Stock",TAL,TAL Education Group American Depositary Shares,1
+AAL,"American Airlines Group, Inc. - Common Stock",VAL,Valaris Limited Common Shares,1
+AAL,"American Airlines Group, Inc. - Common Stock",WAL,Western Alliance Bancorporation Common Stock (DE),1
+OPEN,Opendoor Technologies Inc  - Common Stock,OGEN,Oragenics Inc. Common Stock,1
+OPEN,Opendoor Technologies Inc  - Common Stock,PEN,"Penumbra, Inc. Common Stock",1
+TSLS,Direxion Daily TSLA Bear 1X Shares,SLS,"SELLAS Life Sciences Group, Inc.  - Common Stock",1
+TSLS,Direxion Daily TSLA Bear 1X Shares,TLS,Telos Corporation - Common Stock,1
+TSLS,Direxion Daily TSLA Bear 1X Shares,TPLS,Thornburg Core Plus Bond ETF,1
+TSLS,Direxion Daily TSLA Bear 1X Shares,TSLA,"Tesla, Inc.  - Common Stock",1
+TSLS,Direxion Daily TSLA Bear 1X Shares,TGLS,Tecnoglass Inc. Ordinary Shares,1
+TSLS,Direxion Daily TSLA Bear 1X Shares,TSLX,"Sixth Street Specialty Lending, Inc. Common Stock",1
+IBIT,iShares Bitcoin Trust ETF,IBIO,"iBio, Inc. - Common Stock",1
+IBIT,iShares Bitcoin Trust ETF,ILIT,iShares Lithium Miners and Producers ETF,1
+IBIT,iShares Bitcoin Trust ETF,XBIT,XBiotech Inc. - Common Stock,1
+IBIT,iShares Bitcoin Trust ETF,BIT,BlackRock Multi-Sector Income Trust Common Shares of Beneficial Interest,1
+IBIT,iShares Bitcoin Trust ETF,EBIT,Harbor AlphaEdge Small Cap Earners ETF,1
+RIVN,"Rivian Automotive, Inc. - Class A Common Stock",FIVN,"Five9, Inc. - Common Stock",1
+RIVN,"Rivian Automotive, Inc. - Class A Common Stock",LIVN,LivaNova PLC - Ordinary Shares,1
+RIVN,"Rivian Automotive, Inc. - Class A Common Stock",DIVN,Horizon Dividend Income ETF,1
+DUST,Direxion Daily Gold Miners Index Bear 2X Shares,DTST,Data Storage Corporation - Common Stock,1
+DUST,Direxion Daily Gold Miners Index Bear 2X Shares,DUOT,"Duos Technologies Group, Inc. - Common Stock",1
+DUST,Direxion Daily Gold Miners Index Bear 2X Shares,DXST,Decent Holding Inc. - Class A Ordinary Shares,1
+DUST,Direxion Daily Gold Miners Index Bear 2X Shares,OUST,"Ouster, Inc. - Common Stock",1
+DUST,Direxion Daily Gold Miners Index Bear 2X Shares,DPST,Direxion Daily Regional Banks Bull 3X Shares,1
+DUST,Direxion Daily Gold Miners Index Bear 2X Shares,MUST,Columbia Multi-Sector Municipal Income ETF,1
+DUST,Direxion Daily Gold Miners Index Bear 2X Shares,UST,ProShares Ultra 7-10 Year Treasury,1
+BMNR,"BitMine Immersion Technologies, Inc. Common Stock",BANR,Banner Corporation - Common Stock,1
+BMNR,"BitMine Immersion Technologies, Inc. Common Stock",BMR,Beamr Imaging Ltd. - Ordinary Share,1
+BMNR,"BitMine Immersion Technologies, Inc. Common Stock",BMRN,BioMarin Pharmaceutical Inc. - Common Stock,1
+BMNR,"BitMine Immersion Technologies, Inc. Common Stock",BNR,Burning Rock Biotech Limited - American Depositary Shares,1
+BMNR,"BitMine Immersion Technologies, Inc. Common Stock",LMNR,Limoneira Co - Common Stock,1
+BMNR,"BitMine Immersion Technologies, Inc. Common Stock",MNR,Mach Natural Resources LP Common Units representing Limited Partner Interests,1
+QQQ,"Invesco QQQ Trust, Series 1",GQQQ,Astoria US Quality Growth Kings ETF,1
+QQQ,"Invesco QQQ Trust, Series 1",IQQQ,ProShares Nasdaq-100 High Income ETF,1
+QQQ,"Invesco QQQ Trust, Series 1",KQQQ,Kurv Technology Titans Select ETF,1
+QQQ,"Invesco QQQ Trust, Series 1",MQQQ,Tradr 2X Long Innovation 100 Monthly ETF,1
+QQQ,"Invesco QQQ Trust, Series 1",QXQ,SGI Enhanced Nasdaq-100 ETF,1
+QQQ,"Invesco QQQ Trust, Series 1",YQQQ,YieldMax Short N100 Option Income Strategy ETF,1
+QQQ,"Invesco QQQ Trust, Series 1",CQQQ,Invesco China Technology ETF,1
+TRIB,Trinity Biotech plc - American Depositary Shares,TRIN,Trinity Capital Inc. - Common Stock,1
+TRIB,Trinity Biotech plc - American Depositary Shares,TRIP,"TripAdvisor, Inc. - Common Stock",1
+TRIB,Trinity Biotech plc - American Depositary Shares,TRMB,Trimble Inc. - Common Stock,1
+NFLX,"Netflix, Inc. - Common Stock",FLX,BingEx Limited - American Depositary Shares,1
+NFLX,"Netflix, Inc. - Common Stock",MFLX,First Trust Flexible Municipal High Income ETF,1
+NFLX,"Netflix, Inc. - Common Stock",OFLX,"Omega Flex, Inc. - Common Stock",1
+NFLX,"Netflix, Inc. - Common Stock",JFLX,JPMorgan Flexible Debt ETF,1
+NFLX,"Netflix, Inc. - Common Stock",XFLX,FundX Flexible ETF,1
+CGC,Canopy Growth Corporation - Common Shares,BGC,"BGC Group, Inc. - Class A Common Stock",1
+CGC,Canopy Growth Corporation - Common Shares,CAC,Camden National Corporation - Common Stock,1
+CGC,Canopy Growth Corporation - Common Shares,CBC,"Central Bancompany, Inc. - Class A Common Stock",1
+CGC,Canopy Growth Corporation - Common Shares,CCC,CCC Intelligent Solutions Holdings Inc. - Common Stock,1
+CGC,Canopy Growth Corporation - Common Shares,CCG,Cheche Group Inc. - Class A Ordinary Shares,1
+CGC,Canopy Growth Corporation - Common Shares,CDC,VictoryShares US EQ Income Enhanced Volatility Wtd ETF,1
+CGC,Canopy Growth Corporation - Common Shares,CG,The Carlyle Group Inc. - Common Stock,1
+CGC,Canopy Growth Corporation - Common Shares,PGC,Peapack-Gladstone Financial Corporation - Common Stock,1
+CGC,Canopy Growth Corporation - Common Shares,RGC,Regencell Bioscience Holdings Limited - Ordinary Shares,1
+CGC,Canopy Growth Corporation - Common Shares,SGC,"Superior Group of Companies, Inc. - Common Stock",1
+CGC,Canopy Growth Corporation - Common Shares,CC,Chemours Company (The) Common Stock,1
+CGC,Canopy Growth Corporation - Common Shares,CMC,Commercial Metals Company Common Stock,1
+CGC,Canopy Growth Corporation - Common Shares,CNC,Centene Corporation Common Stock,1
+CGC,Canopy Growth Corporation - Common Shares,CRC,California Resources Corporation Common Stock,1
+CGC,Canopy Growth Corporation - Common Shares,GCC,WisdomTree EnhancedContinuous Commodity Index Fund,1
+CGC,Canopy Growth Corporation - Common Shares,IGC,"IGC Pharma, Inc. Common Stock",1
+CGC,Canopy Growth Corporation - Common Shares,KGC,Kinross Gold Corporation Common Stock,1
+CGC,Canopy Growth Corporation - Common Shares,MGC,Vanguard Mega Cap ETF,1
+PLTR,Palantir Technologies Inc. - Class A Common Stock,DLTR,"Dollar Tree, Inc. - Common Stock",1
+PLTR,Palantir Technologies Inc. - Class A Common Stock,KLTR,"Kaltura, Inc. - Common Stock",1
+PLTR,Palantir Technologies Inc. - Class A Common Stock,PLMR,"Palomar Holdings, Inc. - Common stock",1
+PLTR,Palantir Technologies Inc. - Class A Common Stock,PLTK,Playtika Holding Corp. - Common Stock,1
+PLTR,Palantir Technologies Inc. - Class A Common Stock,PLUR,Pluri Inc. - Common Stock,1
+PLTR,Palantir Technologies Inc. - Class A Common Stock,PMTR,Perimeter Acquisition Corp. I - Class A Ordinary Shares,1
+PLTR,Palantir Technologies Inc. - Class A Common Stock,PSTR,PeakShares Sector Rotation ETF,1
+PLTR,Palantir Technologies Inc. - Class A Common Stock,FLTR,VanEck IG Floating Rate ETF,1
+PLTR,Palantir Technologies Inc. - Class A Common Stock,GLTR,abrdn Physical Precious Metals Basket Shares ETF,1
+AMZN,"Amazon.com, Inc. - Common Stock",ALZN,"Alzamend Neuro, Inc. - Common Stock",1
+AMZN,"Amazon.com, Inc. - Common Stock",AMGN,Amgen Inc. - Common Stock,1
+AMZN,"Amazon.com, Inc. - Common Stock",AZN,AstraZeneca PLC - American Depositary Shares,1
+AMZN,"Amazon.com, Inc. - Common Stock",AIZN,"Assurant, Inc. 5.25% Subordinated Notes due 2061",1
+AMZN,"Amazon.com, Inc. - Common Stock",AMN,AMN Healthcare Services Inc,1
+AMZN,"Amazon.com, Inc. - Common Stock",AMZE,"Amaze Holdings, Inc. Common Stock",1
+RGTI,"Rigetti Computing, Inc.  - Common stock",RGTIW,"Rigetti Computing, Inc.  - Redeemable warrants, each whole warrant exercisable for one Class A ordinary share at an exercise price of $11.50",1
+RGTI,"Rigetti Computing, Inc.  - Common stock",RMTI,"Rockwell Medical, Inc. - Common Stock",1
+NVD,GraniteShares 2x Short NVDA Daily ETF,NVDA,NVIDIA Corporation - Common Stock,1
+NVD,GraniteShares 2x Short NVDA Daily ETF,AVD,American Vanguard Corporation Common Stock ($0.10 Par Value),1
+NVD,GraniteShares 2x Short NVDA Daily ETF,FVD,First Trust VL Dividend,1
+NVD,GraniteShares 2x Short NVDA Daily ETF,NAD,Nuveen Quality Municipal Income Fund Common Stock,1
+NVD,GraniteShares 2x Short NVDA Daily ETF,NGD,New Gold Inc.,1
+NVD,GraniteShares 2x Short NVDA Daily ETF,NVO,Novo Nordisk A/S Common Stock,1
+NVD,GraniteShares 2x Short NVDA Daily ETF,NVR,"NVR, Inc. Common Stock",1
+NVD,GraniteShares 2x Short NVDA Daily ETF,NVS,Novartis AG Common Stock,1
+HIHO,Highway Holdings Limited - Common Stock,HIPO,Hippo Holdings Inc. Common Stock,1
+BITO,ProShares Bitcoin ETF,BITF,Bitfarms Ltd. - Common Stock,1
+BITO,ProShares Bitcoin ETF,IBTO,iShares iBonds Dec 2033 Term Treasury ETF,1
+BITO,ProShares Bitcoin ETF,NITO,"N2OFF, Inc. - Common Stock",1
+BITO,ProShares Bitcoin ETF,BIO,"Bio-Rad Laboratories, Inc. Class A Common Stock",1
+BITO,ProShares Bitcoin ETF,BTO,John Hancock Financial Opportunities Fund Common Stock,1
+MARA,"MARA Holdings, Inc. - Common Stock",MAMA,"Mama's Creations, Inc. - Common Stock",1
+MARA,"MARA Holdings, Inc. - Common Stock",MAR,Marriott International - Class A Common Stock,1
+MARA,"MARA Holdings, Inc. - Common Stock",MIRA,"MIRA Pharmaceuticals, Inc. - Common Stock",1
+MARA,"MARA Holdings, Inc. - Common Stock",TARA,"Protara Therapeutics, Inc.  - Common Stock",1
+MARA,"MARA Holdings, Inc. - Common Stock",GARA,Guinness Atkinson Real Assets Income ETF,1
+MARA,"MARA Holdings, Inc. - Common Stock",MAA,"Mid-America Apartment Communities, Inc. Common Stock",1
+MARA,"MARA Holdings, Inc. - Common Stock",MAIA,"MAIA Biotechnology, Inc. Common Stock",1
+MARA,"MARA Holdings, Inc. - Common Stock",MTRA,Invesco International Growth Focus ETF,1
+CMCSA,Comcast Corporation - Class A Common Stock,CMCSV,Comcast Corporation - Class A Common Stock Ex-Distribution When Issued,1
+ABEV,Ambev S.A. American Depositary Shares (Each representing 1 Common Share),ABEO,Abeona Therapeutics Inc. - Common Stock,1
+ABEV,Ambev S.A. American Depositary Shares (Each representing 1 Common Share),ABVE,Above Food Ingredients Inc. - Common Stock,1
+ABEV,Ambev S.A. American Depositary Shares (Each representing 1 Common Share),ABBV,AbbVie Inc. Common Stock,1
+ABEV,Ambev S.A. American Depositary Shares (Each representing 1 Common Share),SBEV,"Splash Beverage Group, Inc. (NV) Common Stock",1
+BITF,Bitfarms Ltd. - Common Stock,BIAF,"bioAffinity Technologies, Inc. - Common Stock",1
+BITF,Bitfarms Ltd. - Common Stock,BTF,CoinShares Bitcoin and Ether ETF,1
+BAC,Bank of America Corporation Common Stock,BFC,Bank First Corporation - Common Stock,1
+BAC,Bank of America Corporation Common Stock,BGC,"BGC Group, Inc. - Class A Common Stock",1
+BAC,Bank of America Corporation Common Stock,BNC,CEA Industries Inc. - Common Stock,1
+BAC,Bank of America Corporation Common Stock,BVC,BitVentures Limited - American Depositary Shares,1
+BAC,Bank of America Corporation Common Stock,CAC,Camden National Corporation - Common Stock,1
+BAC,Bank of America Corporation Common Stock,IAC,IAC Inc. - Common Stock,1
+BAC,Bank of America Corporation Common Stock,IBAC,IB Acquisition Corp. - Common Stock,1
+BAC,Bank of America Corporation Common Stock,SBAC,SBA Communications Corporation - Class A Common Stock,1
+BAC,Bank of America Corporation Common Stock,BA,Boeing Company (The) Common Stock,1
+BAC,Bank of America Corporation Common Stock,BAH,Booz Allen Hamilton Holding Corporation Common Stock,1
+BAC,Bank of America Corporation Common Stock,BAK,Braskem SA ADR,1
+BAC,Bank of America Corporation Common Stock,BANC,"Banc of California, Inc. Common Stock",1
+BAC,Bank of America Corporation Common Stock,BAP,Credicorp Ltd. Common Stock,1
+BAC,Bank of America Corporation Common Stock,BAX,Baxter International Inc. Common Stock,1
+BAC,Bank of America Corporation Common Stock,BBC,Virtus LifeSci Biotech Clinical Trials ETF,1
+BAC,Bank of America Corporation Common Stock,BC,Brunswick Corporation Common Stock,1
+BAC,Bank of America Corporation Common Stock,BCC,"Boise Cascade, L.L.C. Common Stock",1
+BAC,Bank of America Corporation Common Stock,BDC,Belden Inc Common Stock,1
+BAC,Bank of America Corporation Common Stock,BHC,Bausch Health Companies Inc. Common Stock,1
+BAC,Bank of America Corporation Common Stock,BOC,Boston Omaha Corporation Class A Common Stock,1
+BAC,Bank of America Corporation Common Stock,BRC,Brady Corporation Common Stock,1
+BAC,Bank of America Corporation Common Stock,BSAC,Banco Santander - Chile ADS,1
+BAC,Bank of America Corporation Common Stock,BTC,Grayscale Bitcoin Mini Trust (BTC),1
+BAC,Bank of America Corporation Common Stock,BXC,Bluelinx Holdings Inc. Common Stock,1
+BAC,Bank of America Corporation Common Stock,DAC,Danaos Corporation Common Stock,1
+BAC,Bank of America Corporation Common Stock,LAC,Lithium Americas Corp. Common Shares,1
+BAC,Bank of America Corporation Common Stock,MAC,Macerich Company (The) Common Stock,1
+BAC,Bank of America Corporation Common Stock,NAC,Nuveen California Quality Municipal Income Fund,1
+BAC,Bank of America Corporation Common Stock,PAC,"Grupo Aeroportuario Del Pacifico, S.A. B. de C.V. Grupo Aeroportuario Del Pacifico, S.A. de C.V. (each representing 10 Series B shares)",1
+BAC,Bank of America Corporation Common Stock,RAC,Rithm Acquisition Corp. Class A Ordinary Shares,1
+BAC,Bank of America Corporation Common Stock,TAC,TransAlta Corporation Ordinary Shares,1
+BAC,Bank of America Corporation Common Stock,VAC,Marriott Vacations Worldwide Corporation Common Stock,1
+MU,"Micron Technology, Inc. - Common Stock",BU,Defiance Daily Target 2X Long BU ETF,1
+MU,"Micron Technology, Inc. - Common Stock",EU,enCore Energy Corp. - Common Stock,1
+MU,"Micron Technology, Inc. - Common Stock",MB,MasterBeef Group - Ordinary Shares,1
+MU,"Micron Technology, Inc. - Common Stock",MQ,"Marqeta, Inc. - Class A Common Stock",1
+MU,"Micron Technology, Inc. - Common Stock",AU,AngloGold Ashanti PLC Ordinary Shares,1
+MU,"Micron Technology, Inc. - Common Stock",CMU,MFS Municipal Income Trust Common Stock,1
+MU,"Micron Technology, Inc. - Common Stock",LU,"Lufax Holding Ltd American Depositary Shares, each representing two (2) Ordinary Shares",1
+MU,"Micron Technology, Inc. - Common Stock",M,Macy's Inc Common Stock,1
+MU,"Micron Technology, Inc. - Common Stock",MA,Mastercard Incorporated Common Stock,1
+MU,"Micron Technology, Inc. - Common Stock",MC,Moelis & Company Class A Common Stock,1
+MU,"Micron Technology, Inc. - Common Stock",MD,"Pediatrix Medical Group, Inc. Common Stock",1
+MU,"Micron Technology, Inc. - Common Stock",MDU,"MDU Resources Group, Inc. Common Stock (Holding Company)",1
+MU,"Micron Technology, Inc. - Common Stock",MG,Mistras Group Inc Common Stock,1
+MU,"Micron Technology, Inc. - Common Stock",MH,"McGraw Hill, Inc. Common Stock",1
+MU,"Micron Technology, Inc. - Common Stock",MI,NFT Limited Class A Ordinary Share,1
+MU,"Micron Technology, Inc. - Common Stock",MJ,Amplify Alternative Harvest ETF,1
+MU,"Micron Technology, Inc. - Common Stock",MMU,"Western Asset Managed Municipals Fund, Inc. Common Stock",1
+MU,"Micron Technology, Inc. - Common Stock",MO,"Altria Group, Inc.",1
+MU,"Micron Technology, Inc. - Common Stock",MP,MP Materials Corp. Common Stock,1
+MU,"Micron Technology, Inc. - Common Stock",MPU,Mega Matrix Inc. Class A Ordinary Shares,1
+MU,"Micron Technology, Inc. - Common Stock",MS,Morgan Stanley Common Stock,1
+MU,"Micron Technology, Inc. - Common Stock",MT,Arcelor Mittal NY Registry Shares NEW,1
+MU,"Micron Technology, Inc. - Common Stock",MUR,Murphy Oil Corporation Common Stock,1
+MU,"Micron Technology, Inc. - Common Stock",MUX,McEwen Inc. Common Stock,1
+MU,"Micron Technology, Inc. - Common Stock",MX,Magnachip Semiconductor Corporation Common Stock,1
+MU,"Micron Technology, Inc. - Common Stock",NU,Nu Holdings Ltd. Class A Ordinary Shares,1
+MU,"Micron Technology, Inc. - Common Stock",SMU,Tradr 2X Long SMR Daily ETF,1
+MU,"Micron Technology, Inc. - Common Stock",SU,Suncor Energy  Inc. Common Stock,1
+MU,"Micron Technology, Inc. - Common Stock",TU,Telus Corporation Ordinary Shares,1
+MU,"Micron Technology, Inc. - Common Stock",U,Unity Software Inc. Common Stock,1
+MU,"Micron Technology, Inc. - Common Stock",WU,Western Union Company (The) Common Stock,1
+TLT,iShares 20+ Year Treasury Bond ETF,ALT,"Altimmune, Inc. - Common Stock",1
+TLT,iShares 20+ Year Treasury Bond ETF,PLT,Defiance Leveraged Long Income PLTR ETF,1
+TLT,iShares 20+ Year Treasury Bond ETF,TLF,"Tandy Leather Factory, Inc. - common stock",1
+TLT,iShares 20+ Year Treasury Bond ETF,TLN,Talen Energy Corporation - Common Stock,1
+TLT,iShares 20+ Year Treasury Bond ETF,TLS,Telos Corporation - Common Stock,1
+TLT,iShares 20+ Year Treasury Bond ETF,HLT,Hilton Worldwide Holdings Inc. Common Stock ,1
+TLT,iShares 20+ Year Treasury Bond ETF,TGT,Target Corporation Common Stock,1
+TLT,iShares 20+ Year Treasury Bond ETF,TILT,FlexShares Mornigstar US Market Factors Tilt Index Fund ETF,1
+TLT,iShares 20+ Year Treasury Bond ETF,TLK,"PT Telekomunikasi Indonesia, Tbk",1
+TLT,iShares 20+ Year Treasury Bond ETF,TOT,LionShares U.S. Equity Total Return ETF,1
+TLT,iShares 20+ Year Treasury Bond ETF,TRT,Trio-Tech International Common Stock,1
+TLT,iShares 20+ Year Treasury Bond ETF,TSLT,T-REX 2X Long Tesla Daily Target ETF,1
+TLT,iShares 20+ Year Treasury Bond ETF,TT,Trane Technologies plc,1
+TLT,iShares 20+ Year Treasury Bond ETF,TXT,Textron Inc. Common Stock,1
+TLT,iShares 20+ Year Treasury Bond ETF,VLT,Invesco High Income Trust II,1
+ETHA,iShares Ethereum Trust ETF,ATHA,"Athira Pharma, Inc. - Common Stock",1
+ETHA,iShares Ethereum Trust ETF,EGHA,EGH Acquisition Corp. - Class A ordinary shares,1
+ETHA,iShares Ethereum Trust ETF,ESHA,ESH Acquisition Corp. - Class A Common Stock,1
+ETHA,iShares Ethereum Trust ETF,ETHM,Dynamix Corporation - Class A Ordinary Share,1
+ETHA,iShares Ethereum Trust ETF,ETHZ,ETHZilla Corporation - Common Stock,1
+SOBR,"SOBR Safe, Inc. - Common Stock",SABR,Sabre Corporation - Common Stock,1
+SOBR,"SOBR Safe, Inc. - Common Stock",SNBR,Sleep Number Corporation - Common Stock,1
+SOBR,"SOBR Safe, Inc. - Common Stock",SBR,Sabine Royalty Trust Common Stock,1
+SOBR,"SOBR Safe, Inc. - Common Stock",SOAR,"Volato Group, Inc. Class A Common Stock",1
+SOBR,"SOBR Safe, Inc. - Common Stock",SOR,"Source Capital, Inc. Cmn Shs of BI",1
+SOFI,"SoFi Technologies, Inc.  - Common Stock",SPFI,"South Plains Financial, Inc. - Common Stock",1
+SOFI,"SoFi Technologies, Inc.  - Common Stock",SDFI,AB Short Duration Income ETF,1
+SOFI,"SoFi Technologies, Inc.  - Common Stock",SIFI,Harbor Scientific Alpha Income ETF,1
+SOFI,"SoFi Technologies, Inc.  - Common Stock",SSFI,Day Hagan Smart Sector Fixed Income ETF,1
+SOFI,"SoFi Technologies, Inc.  - Common Stock",SYFI,AB Short Duration High Yield ETF,1
+DTCK,Davis Commodities Limited - Class A Ordinary Shares,DTCX,"Datacentrex, Inc. - Common Stock",1
+DTCK,Davis Commodities Limited - Class A Ordinary Shares,DECK,Deckers Outdoor Corporation Common Stock,1
+DTCK,Davis Commodities Limited - Class A Ordinary Shares,DTK,DTE Energy Company 2025 Series H 6.25% Junior Subordinated Debentures due 2085,1
+CRWV,"CoreWeave, Inc. - Class A Common Stock",CRWD,"CrowdStrike Holdings, Inc. - Class A Common Stock",1
+CRWV,"CoreWeave, Inc. - Class A Common Stock",CRWS,"Crown Crafts, Inc. - Common Stock",1
+MSTX,Defiance Daily Target 2x Long MSTR ETF,MGTX,MeiraGTx Holdings plc - Ordinary Shares,1
+MSTX,Defiance Daily Target 2x Long MSTR ETF,MKTX,"MarketAxess Holdings, Inc. - Common Stock",1
+MSTX,Defiance Daily Target 2x Long MSTR ETF,MLTX,MoonLake Immunotherapeutics - Class A Ordinary Shares,1
+MSTX,Defiance Daily Target 2x Long MSTR ETF,MMTX,Miluna Acquisition Corp - Class A Ordinary Shares,1
+MSTX,Defiance Daily Target 2x Long MSTR ETF,MSEX,Middlesex Water Company - Common Stock,1
+MSTX,Defiance Daily Target 2x Long MSTR ETF,STX,Seagate Technology Holdings PLC - Ordinary Shares (Ireland),1
+MSTX,Defiance Daily Target 2x Long MSTR ETF,ASTX,Tradr 2X Long ASTS Daily ETF,1
+MSTX,Defiance Daily Target 2x Long MSTR ETF,DSTX,Distillate International Fundamental Stability & Value ETF,1
+MSTX,Defiance Daily Target 2x Long MSTR ETF,MATX,"Matson, Inc. Common Stock",1
+MSTX,Defiance Daily Target 2x Long MSTR ETF,MTX,Minerals Technologies Inc. Common Stock,1
+MSTX,Defiance Daily Target 2x Long MSTR ETF,OSTX,OS Therapies Incorporated Common Stock,1
+GRAB,Grab Holdings Limited - Class A Ordinary Shares,GMAB,Genmab A/S - American Depositary Shares,1
+GRAB,Grab Holdings Limited - Class A Ordinary Shares,GRAL,"GRAIL, Inc. - Common Stock",1
+GRAB,Grab Holdings Limited - Class A Ordinary Shares,GAB,"Gabelli Equity Trust, Inc. (The) Common Stock",1
+GRAB,Grab Holdings Limited - Class A Ordinary Shares,GBAB,Guggenheim Taxable Municipal Bond & Investment Grade Debt Trust Common Shares of Beneficial Interest,1
+DJT,Trump Media & Technology Group Corp. - Common Stock,IJT,iShares S&P SmallCap 600 Growth ETF,1
+DJT,Trump Media & Technology Group Corp. - Common Stock,DAT,ProShares Big Data Refiners ETF,1
+DJT,Trump Media & Technology Group Corp. - Common Stock,DDT,Dillard's Capital Trust I,1
+DJT,Trump Media & Technology Group Corp. - Common Stock,DGT,State Street SPDR Global Dow ETF,1
+DJT,Trump Media & Technology Group Corp. - Common Stock,DHT,"DHT Holdings, Inc.",1
+DJT,Trump Media & Technology Group Corp. - Common Stock,DIT,AMCON Distributing Company Common Stock,1
+DJT,Trump Media & Technology Group Corp. - Common Stock,DT,"Dynatrace, Inc. Common Stock",1
+DJT,Trump Media & Technology Group Corp. - Common Stock,GJT,"Synthetic Fixed-Income Securities, Inc. Floating Rate Structured Repackaged Asset-Backed Trust Securities Certificates, Series 2006-3",1
+DJT,Trump Media & Technology Group Corp. - Common Stock,PJT,PJT Partners Inc. Class A Common Stock,1
+DJT,Trump Media & Technology Group Corp. - Common Stock,SJT,San Juan Basin Royalty Trust Common Stock,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",AEC,Anfield Energy Inc. - Common Shares,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",AMD,"Advanced Micro Devices, Inc. - Common Stock",1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",AMSC,American Superconductor Corporation - Common Stock,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",ATMC,AlphaTime Acquisition Corp - Ordinary Shares,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",TMC,TMC the metals company Inc. - Common Stock,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",ACM,AECOM Common Stock,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",ADC,Agree Realty Corporation Common Stock,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",AFMC,First Trust Active Factor Mid Cap ETF,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",ALC,Alcon Inc. Ordinary Shares,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",AM,Antero Midstream Corporation Common Stock,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",AME,"AMETEK, Inc.",1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",AMG,"Affiliated Managers Group, Inc. Common Stock",1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",AMN,AMN Healthcare Services Inc,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",AMP,"Ameriprise Financial, Inc. Common Stock",1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",AMR,"Alpha Metallurgical Resources, Inc. Common Stock",1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",AMRC,"Ameresco, Inc. Class A Common Stock",1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",AMS,American Shared Hospital Services Common Stock,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",AMT,American Tower Corporation (REIT) Common Stock,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",ASC,Ardmore Shipping Corporation Common Stock,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",AVMC,Avantis U.S. Mid Cap Equity ETF,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",CMC,Commercial Metals Company Common Stock,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",EMC,Global X Emerging Markets Great Consumer ETF,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",FMC,FMC Corporation Common Stock,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",HMC,"Honda Motor Company, Ltd. Common Stock",1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",MAC,Macerich Company (The) Common Stock,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",MC,Moelis & Company Class A Common Stock,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",MMC,"Marsh & McLennan Companies, Inc. Common Stock",1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",OMC,Omnicom Group Inc. Common Stock,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",PAMC,Pacer Lunt MidCap Multi-Factor Alternator ETF,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",SMC,Summit Midstream Corporation Common Stock,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",UMC,United Microelectronics Corporation (NEW) Common Stock,1
+AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",VMC,Vulcan Materials Company (Holding Company) Common Stock,1
+CSCO,"Cisco Systems, Inc. - Common Stock",CCSO,Carbon Collective Climate Solutions U.S. Equity ETF,1
+CSCO,"Cisco Systems, Inc. - Common Stock",CECO,CECO Environmental Corp. - Common Stock,1
+CSCO,"Cisco Systems, Inc. - Common Stock",CHCO,City Holding Company - Common Stock,1
+CSCO,"Cisco Systems, Inc. - Common Stock",CHSCO,CHS Inc - Class B Cumulative Redeemable Preferred Stock,1
+CSCO,"Cisco Systems, Inc. - Common Stock",CMCO,Columbus McKinnon Corporation - Common Stock,1
+CSCO,"Cisco Systems, Inc. - Common Stock",COCO,"The Vita Coco Company, Inc. - Common Stock",1
+CSCO,"Cisco Systems, Inc. - Common Stock",CVCO,"Cavco Industries, Inc. - Common Stock",1
+CSCO,"Cisco Systems, Inc. - Common Stock",CWCO,Consolidated Water Co. Ltd. - Ordinary Shares,1
+CSCO,"Cisco Systems, Inc. - Common Stock",TSCO,Tractor Supply Company - Common Stock,1
+CSCO,"Cisco Systems, Inc. - Common Stock",CCO,"Clear Channel Outdoor Holdings, Inc. Common Stock",1
+CSCO,"Cisco Systems, Inc. - Common Stock",CLCO,Cool Company Ltd. Common Shares,1
+CSCO,"Cisco Systems, Inc. - Common Stock",CRCO,YieldMax CRCL Option Income Strategy ETF,1
+CSCO,"Cisco Systems, Inc. - Common Stock",FSCO,FS Credit Opportunities Corp. Common Stock,1
+CSCO,"Cisco Systems, Inc. - Common Stock",SCCO,Southern Copper Corporation Common Stock,1
+CSCO,"Cisco Systems, Inc. - Common Stock",SCO,ProShares UltraShort Bloomberg Crude Oil,1
+CSCO,"Cisco Systems, Inc. - Common Stock",VSCO,Victorias Secret & Co. Common Stock ,1
+BTG,B2Gold Corp Common shares (Canada),BCG,"Binah Capital Group, Inc. - Common Stock",1
+BTG,B2Gold Corp Common shares (Canada),BEG,Leverage Shares 2x Long BE Daily ETF,1
+BTG,B2Gold Corp Common shares (Canada),BTQ,BTQ Technologies Corp. - Common Stock,1
+BTG,B2Gold Corp Common shares (Canada),BTSG,"BrightSpring Health Services, Inc. - Common Stock",1
+BTG,B2Gold Corp Common shares (Canada),BUG,Global X Cybersecurity ETF,1
+BTG,B2Gold Corp Common shares (Canada),IBTG,iShares iBonds Dec 2026 Term Treasury ETF,1
+BTG,B2Gold Corp Common shares (Canada),WTG,Wintergreen Acquisition Corp. - Ordinary Shares,1
+BTG,B2Gold Corp Common shares (Canada),BG,Bunge Limited Common Shares,1
+BTG,B2Gold Corp Common shares (Canada),BGT,BlackRock Floating Rate Income Trust,1
+BTG,B2Gold Corp Common shares (Canada),BTI,"British American Tobacco  Industries, p.l.c. Common Stock ADR",1
+BTG,B2Gold Corp Common shares (Canada),BTU,Peabody Energy Corporation Common Stock ,1
+BTG,B2Gold Corp Common shares (Canada),BWG,BrandywineGLOBAL Global Income Opportunities Fund Inc.,1
+BTG,B2Gold Corp Common shares (Canada),BWTG,Brendan Wood TopGun Index ETF,1
+BTG,B2Gold Corp Common shares (Canada),DTG,DTE Energy Company 2021 Series E 4.375% Junior Subordinated Debentures,1
+BTG,B2Gold Corp Common shares (Canada),ETG,Eaton Vance Tax-Advantaged Global Dividend Income Fund Common Shares of Beneficial Interest,1
+BTG,B2Gold Corp Common shares (Canada),GBTG,"Global Business Travel Group, Inc. Class A Common Stock",1
+BTG,B2Gold Corp Common shares (Canada),MTG,MGIC Investment Corporation Common Stock,1
+BTG,B2Gold Corp Common shares (Canada),STG,"Sunlands Technology Group American Depositary Shares, representing Class A ordinary shares",1
+BTG,B2Gold Corp Common shares (Canada),TBG,TBG Dividend Focus ETF,1
+BTG,B2Gold Corp Common shares (Canada),TG,Tredegar Corporation Common Stock,1
+BTG,B2Gold Corp Common shares (Canada),UTG,Reaves Utility Income Fund Common Shares of Beneficial Interest,1
+BTG,B2Gold Corp Common shares (Canada),VTG,Vanguard Total Treasury ETF,1
+AZI,Autozi Internet Technology (Global) Ltd. - Class A Ordinary Shares,ABI,VictoryShares Pioneer Asset-Based Income ETF,1
+AZI,Autozi Internet Technology (Global) Ltd. - Class A Ordinary Shares,ADI,"Analog Devices, Inc. - Common Stock",1
+AZI,Autozi Internet Technology (Global) Ltd. - Class A Ordinary Shares,AEI,Alset Inc. - Common Stock,1
+AZI,Autozi Internet Technology (Global) Ltd. - Class A Ordinary Shares,API,"Agora, Inc. - ADS",1
+AZI,Autozi Internet Technology (Global) Ltd. - Class A Ordinary Shares,ACI,"Albertsons Companies, Inc. Class A Common Stock",1
+AZI,Autozi Internet Technology (Global) Ltd. - Class A Ordinary Shares,AGI,Alamos Gold Inc. Class A Common Shares,1
+AZI,Autozi Internet Technology (Global) Ltd. - Class A Ordinary Shares,AI,"C3.ai, Inc. Class A Common Stock",1
+AZI,Autozi Internet Technology (Global) Ltd. - Class A Ordinary Shares,AII,"American Integrity Insurance Group, Inc. Common Stock",1
+AZI,Autozi Internet Technology (Global) Ltd. - Class A Ordinary Shares,AIZ,"Assurant, Inc. Common Stock",1
+AZI,Autozi Internet Technology (Global) Ltd. - Class A Ordinary Shares,ARI,"Apollo Commercial Real Estate Finance, Inc",1
+AZI,Autozi Internet Technology (Global) Ltd. - Class A Ordinary Shares,ATI,ATI Inc. Common Stock,1
+AZI,Autozi Internet Technology (Global) Ltd. - Class A Ordinary Shares,AWI,Armstrong World Industries Inc Common Stock,1
+AZI,Autozi Internet Technology (Global) Ltd. - Class A Ordinary Shares,AYI,Acuity Inc. Common Stock,1
+AZI,Autozi Internet Technology (Global) Ltd. - Class A Ordinary Shares,AZO,"AutoZone, Inc. Common Stock",1
+AZI,Autozi Internet Technology (Global) Ltd. - Class A Ordinary Shares,AZZ,AZZ Inc.,1
+GOOGL,Alphabet Inc. - Class A Common Stock,GOOG,Alphabet Inc. - Class C Capital Stock,1
+RXRX,"Recursion Pharmaceuticals, Inc. - Class A Common Stock",LXRX,"Lexicon Pharmaceuticals, Inc. - Common Stock",1
+RXRX,"Recursion Pharmaceuticals, Inc. - Class A Common Stock",RPRX,Royalty Pharma plc - Class A Ordinary Shares,1
+RXRX,"Recursion Pharmaceuticals, Inc. - Class A Common Stock",XRX,Xerox Holdings Corporation - Common Stock,1
+RXRX,"Recursion Pharmaceuticals, Inc. - Class A Common Stock",RHRX,RH Tactical Rotation ETF,1
+RXRX,"Recursion Pharmaceuticals, Inc. - Class A Common Stock",RRX,Regal Rexnord Corporation Common Stock,1
+MIMI,Mint Incorporation Limited - Class A Ordinary Shares,MIGI,Mawson Infrastructure Group Inc. - Common Stock,1
+MIMI,Mint Incorporation Limited - Class A Ordinary Shares,MYMI,SPDR SSGA My2029 Municipal Bond ETF,1
+MIMI,Mint Incorporation Limited - Class A Ordinary Shares,WIMI,WiMi Hologram Cloud Inc. - Class B Ordinary Shares,1
+MIMI,Mint Incorporation Limited - Class A Ordinary Shares,LIMI,Themes Lithium & Battery Metal Miners ETF,1
+MIMI,Mint Incorporation Limited - Class A Ordinary Shares,MMI,"Marcus & Millichap, Inc. Common Stock",1
+ACHR,Archer Aviation Inc. Class A Common Stock,ACHC,"Acadia Healthcare Company, Inc. - Common Stock",1
+ACHR,Archer Aviation Inc. Class A Common Stock,ACMR,"ACM Research, Inc. - Class A Common Stock",1
+ACHR,Archer Aviation Inc. Class A Common Stock,AEHR,Aehr Test Systems - Common Stock,1
+ACHR,Archer Aviation Inc. Class A Common Stock,ATHR,"Aether Holdings, Inc. - Common Stock",1
+ACHR,Archer Aviation Inc. Class A Common Stock,CHR,"Cheer Holding, Inc.  - Class A Ordinary Share",1
+ACHR,Archer Aviation Inc. Class A Common Stock,ICHR,Ichor Holdings - Ordinary Shares,1
+ACHR,Archer Aviation Inc. Class A Common Stock,ACR,ACRES Commercial Realty Corp. Common Stock,1
+ACHR,Archer Aviation Inc. Class A Common Stock,AHR,"American Healthcare REIT, Inc. Common Stock",1
+ACHR,Archer Aviation Inc. Class A Common Stock,ASHR,Xtrackers Harvest CSI 300 China A-Shares ETF,1
+ACHR,Archer Aviation Inc. Class A Common Stock,SCHR,Schwab Intermediate-Term U.S. Treasury ETF,1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",AEMD,"Aethlon Medical, Inc. - Common Stock",1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",AIMD,"Ainos, Inc. - Common Stock",1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",AMOD,"Alpha Modus Holdings, Inc. - Class A Common Stock",1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",AMWD,American Woodmark Corporation - Common Stock,1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",VMD,"Viemed Healthcare, Inc. - Common Shares",1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",AD,"Array Digital Infrastructure, Inc. Common Shares",1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",ADM,Archer-Daniels-Midland Company Common Stock,1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",AGD,abrdn Global Dynamic Dividend Fund Common Shares of Beneficial Interest,1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",AM,Antero Midstream Corporation Common Stock,1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",AMC,"AMC Entertainment Holdings, Inc. Class A Common Stock",1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",AME,"AMETEK, Inc.",1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",AMG,"Affiliated Managers Group, Inc. Common Stock",1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",AMN,AMN Healthcare Services Inc,1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",AMP,"Ameriprise Financial, Inc. Common Stock",1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",AMR,"Alpha Metallurgical Resources, Inc. Common Stock",1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",AMS,American Shared Hospital Services Common Stock,1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",AMT,American Tower Corporation (REIT) Common Stock,1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",AOD,abrdn Total Dynamic Dividend Fund Common Shares of Beneficial Interest,1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",AOMD,"Angel Oak Mortgage REIT, Inc. 9.750% Senior Notes due 2030",1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",APD,"Air Products and Chemicals, Inc. Common Stock",1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",AVD,American Vanguard Corporation Common Stock ($0.10 Par Value),1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",BAMD,Brookstone Dividend Stock ETF,1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",EMD,Western Asset Emerging Markets Debt Fund Inc Common Stock,1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",MD,"Pediatrix Medical Group, Inc. Common Stock",1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",MMD,NYLI MacKay DefinedTerm Muni Opportunities Fund Common Shares,1
+AMD,"Advanced Micro Devices, Inc. - Common Stock",RMD,ResMed Inc. Common Stock,1
+PLTD,Direxion Daily PLTR Bear 1X Shares,PLTK,Playtika Holding Corp. - Common Stock,1
+PLTD,Direxion Daily PLTR Bear 1X Shares,PLTR,Palantir Technologies Inc. - Class A Common Stock,1
+PLTD,Direxion Daily PLTR Bear 1X Shares,BLTD,Bluemonte Long Term Bond ETF,1
+PLTD,Direxion Daily PLTR Bear 1X Shares,PLD,"Prologis, Inc. Common Stock",1
+PLTD,Direxion Daily PLTR Bear 1X Shares,TLTD,FlexShares Morningstar Developed Markets ex-US Factor Tilt Index Fund,1
+BTBT,"Bit Digital, Inc. - Ordinary Share",BTBD,"BT Brands, Inc. - Common Stock",1
+BTBT,"Bit Digital, Inc. - Ordinary Share",BBT,Beacon Financial Corporation Common stock,1
+BTBT,"Bit Digital, Inc. - Ordinary Share",BDBT,Bluemonte Core Bond ETF,1
+BTBT,"Bit Digital, Inc. - Ordinary Share",TBT,ProShares UltraShort Lehman 20  Year Treasury,1
+ATPC,Agape ATP Corporation - Common Stock,ASPC,A SPAC III Acquisition Corp. - Class A Ordinary Shares,1
+ATPC,Agape ATP Corporation - Common Stock,ATEC,"Alphatec Holdings, Inc. - Common Stock",1
+ATPC,Agape ATP Corporation - Common Stock,ATLC,Atlanticus Holdings Corporation - Common Stock,1
+ATPC,Agape ATP Corporation - Common Stock,ATRC,"AtriCure, Inc. - Common Stock",1
+ATPC,Agape ATP Corporation - Common Stock,TPC,Tutor Perini Corporation Common Stock,1
+IREN,IREN Limited - Ordinary Shares,IRON,"Disc Medicine, Inc. - Common Stock",1
+IREN,IREN Limited - Ordinary Shares,AREN,"The Arena Group Holdings, Inc. Common Stock",1
+MSFT,Microsoft Corporation - Common Stock,MCFT,"MasterCraft Boat Holdings, Inc. - Common Stock",1
+RZLV,Rezolve AI PLC - Ordinary Shares,RZLT,"Rezolute, Inc. - Common Stock (NV)",1
+RZLV,Rezolve AI PLC - Ordinary Shares,RZLVW,Rezolve AI PLC - Warrants,1
+RZLV,Rezolve AI PLC - Ordinary Shares,RVLV,"Revolve Group, Inc. Class A Common Stock",1
+ECDA,"ECD Automotive Design, Inc. - Common Stock",BCDA,"BioCardia, Inc. - Common Stock",1
+ECDA,"ECD Automotive Design, Inc. - Common Stock",ECDAW,"ECD Automotive Design, Inc. - Warrant",1
+ECDA,"ECD Automotive Design, Inc. - Common Stock",EUDA,Euda Health Holdings Limited - Ordinary Shares,1
+CDE,"Coeur Mining, Inc. Common Stock",CDT,CDT Equity Inc. - Common Stock,1
+CDE,"Coeur Mining, Inc. Common Stock",CDW,CDW Corporation - Common Stock,1
+CDE,"Coeur Mining, Inc. Common Stock",CME,CME Group Inc. - Class A Common Stock,1
+CDE,"Coeur Mining, Inc. Common Stock",CRE,Cre8 Enterprise Limited - Class A Ordinary Shares,1
+CDE,"Coeur Mining, Inc. Common Stock",CUE,"Cue Biopharma, Inc. - Common Stock",1
+CDE,"Coeur Mining, Inc. Common Stock",CADE,Cadence Bank Common Stock,1
+CDE,"Coeur Mining, Inc. Common Stock",CAE,CAE Inc. Ordinary Shares,1
+CDE,"Coeur Mining, Inc. Common Stock",CDRE,"Cadre Holdings, Inc. Common Stock",1
+CDE,"Coeur Mining, Inc. Common Stock",CE,Celanese Corporation Common Stock,1
+CDE,"Coeur Mining, Inc. Common Stock",CEE,"The Central and Eastern Europe Fund, Inc. (The) Common Stock",1
+CDE,"Coeur Mining, Inc. Common Stock",CHE,Chemed Corp,1
+CDE,"Coeur Mining, Inc. Common Stock",COE,"51Talk Online Education Group American depositary shares, each representing 60 Class A ordinary shares",1
+CDE,"Coeur Mining, Inc. Common Stock",CVE,Cenovus Energy Inc Common Stock,1
+CDE,"Coeur Mining, Inc. Common Stock",CXE,MFS High Income Municipal Trust Common Stock,1
+CDE,"Coeur Mining, Inc. Common Stock",DE,Deere & Company Common Stock,1
+CDE,"Coeur Mining, Inc. Common Stock",GDE,WisdomTree Efficient Gold Plus Equity Strategy Fund,1
+CDE,"Coeur Mining, Inc. Common Stock",IDE,"Voya Infrastructure, Industrials and Materials Fund Common Shares of Beneficial Interest",1
+CDE,"Coeur Mining, Inc. Common Stock",VDE,Vanguard Energy ETF,1
+CIFR,Cipher Mining Inc. - Common Stock,CIFRW,Cipher Mining Inc. - Warrant,1
+CIFR,Cipher Mining Inc. - Common Stock,RIFR,Russell Investments Global Infrastructure ETF,1
+CIFR,Cipher Mining Inc. - Common Stock,CFR,"Cullen/Frost Bankers, Inc. Common Stock",1
+CIFR,Cipher Mining Inc. - Common Stock,CITR,"General Enterprise Ventures, Inc. Common Stock",1
+CIFR,Cipher Mining Inc. - Common Stock,XIFR,"XPLR Infrastructure, LP Common Units representing limited partner interests",1
+WMT,Walmart Inc. - Common Stock,WCT,Wellchange Holdings Company Limited - Class A Ordinary shares,1
+WMT,Walmart Inc. - Common Stock,WMG,Warner Music Group Corp. - Class A Common Stock,1
+WMT,Walmart Inc. - Common Stock,YMT,Yimutian Inc. - American Depositary Shares; each representing 25 Class A ordinary shares,1
+WMT,Walmart Inc. - Common Stock,AMT,American Tower Corporation (REIT) Common Stock,1
+WMT,Walmart Inc. - Common Stock,CMT,Core Molding Technologies Inc Common Stock,1
+WMT,Walmart Inc. - Common Stock,KMT,Kennametal Inc. Common Stock,1
+WMT,Walmart Inc. - Common Stock,LMT,Lockheed Martin Corporation Common Stock,1
+WMT,Walmart Inc. - Common Stock,MMT,MFS Multimarket Income Trust Common Stock,1
+WMT,Walmart Inc. - Common Stock,MT,Arcelor Mittal NY Registry Shares NEW,1
+WMT,Walmart Inc. - Common Stock,NMT,Nuveen Massachusetts Quality Municipal Income Fund Common Stock,1
+WMT,Walmart Inc. - Common Stock,PMT,PennyMac Mortgage Investment Trust Common Shares of Beneficial Interest,1
+WMT,Walmart Inc. - Common Stock,RMT,"Royce Micro-Cap Trust, Inc. Common Stock",1
+WMT,Walmart Inc. - Common Stock,WAT,Waters Corporation Common Stock,1
+WMT,Walmart Inc. - Common Stock,WIT,Wipro Limited Common Stock,1
+WMT,Walmart Inc. - Common Stock,WM,"Waste Management, Inc. Common Stock",1
+WMT,Walmart Inc. - Common Stock,WMB,"Williams Companies, Inc. (The) Common Stock",1
+WMT,Walmart Inc. - Common Stock,WMK,"Weis Markets, Inc. Common Stock",1
+WMT,Walmart Inc. - Common Stock,WMS,"Advanced Drainage Systems, Inc. Common Stock",1
+WMT,Walmart Inc. - Common Stock,WST,"West Pharmaceutical Services, Inc. Common Stock",1
+WMT,Walmart Inc. - Common Stock,WT,"WisdomTree, Inc. Common Stock",1
+WMT,Walmart Inc. - Common Stock,WTM,"White Mountains Insurance Group, Ltd. Common Stock",1
+CPNG,"Coupang, Inc. Class A Common Stock",CING,Cingulate Inc. - Common Stock,1
+CPNG,"Coupang, Inc. Class A Common Stock",CANG,Cango Inc. Class A Ordinary Shares,1
+CPNG,"Coupang, Inc. Class A Common Stock",CGNG,Capital Group New Geography Equity ETF,1
+LUNR,"Intuitive Machines, Inc. - Class A Common Stock",LMNR,Limoneira Co - Common Stock,1
+LUNR,"Intuitive Machines, Inc. - Class A Common Stock",LUNG,Pulmonx Corporation - Common Stock,1
+LUNR,"Intuitive Machines, Inc. - Class A Common Stock",GUNR,FlexShares Global Upstream Natural Resources Index Fund ETF,1
+WULF,TeraWulf Inc. - Common Stock,WOLF,"Wolfspeed, Inc. Common Stock New",1
+ASTS,"AST SpaceMobile, Inc. - Class A Common Stock",ABTS,Abits Group Inc - Ordinary Shares,1
+ASTS,"AST SpaceMobile, Inc. - Class A Common Stock",ALTS,ALT5 Sigma Corporation - Common Stock,1
+ASTS,"AST SpaceMobile, Inc. - Class A Common Stock",ASNS,"Actelis Networks, Inc. - Common Stock",1
+ASTS,"AST SpaceMobile, Inc. - Class A Common Stock",ASPS,Altisource Portfolio Solutions S.A. - Common Stock,1
+ASTS,"AST SpaceMobile, Inc. - Class A Common Stock",ASST,"Strive, Inc. - Class A Common Stock",1
+ASTS,"AST SpaceMobile, Inc. - Class A Common Stock",ASTC,Astrotech Corporation - Common Stock,1
+ASTS,"AST SpaceMobile, Inc. - Class A Common Stock",ASTE,"Astec Industries, Inc. - Common Stock",1
+ASTS,"AST SpaceMobile, Inc. - Class A Common Stock",ASTH,Astrana Health Inc. - Common Stock,1
+ASTS,"AST SpaceMobile, Inc. - Class A Common Stock",ASTI,"Ascent Solar Technologies, Inc - Common Stock",1
+ASTS,"AST SpaceMobile, Inc. - Class A Common Stock",ASYS,"Amtech Systems, Inc. - Common Stock",1
+ASTS,"AST SpaceMobile, Inc. - Class A Common Stock",NSTS,"NSTS Bancorp, Inc. - Common Stock",1
+ASTS,"AST SpaceMobile, Inc. - Class A Common Stock",SATS,EchoStar Corporation - Common stock,1
+ASTS,"AST SpaceMobile, Inc. - Class A Common Stock",AOTS,AOT Software Platform ETF,1
+ASTS,"AST SpaceMobile, Inc. - Class A Common Stock",ATS,ATS Corporation Common Shares,1
+ASTS,"AST SpaceMobile, Inc. - Class A Common Stock",VSTS,Vestis Corporation Common Stock,1
+APLD,Applied Digital Corporation - Common Stock,APLS,"Apellis Pharmaceuticals, Inc. - Common Stock",1
+APLD,Applied Digital Corporation - Common Stock,APLT,"Applied Therapeutics, Inc. - Common Stock",1
+APLD,Applied Digital Corporation - Common Stock,PALD,Direxion Daily PANW Bear 1X Shares,1
+APLD,Applied Digital Corporation - Common Stock,UPLD,"Upland Software, Inc. - Common Stock",1
+APLD,Applied Digital Corporation - Common Stock,ABLD,Abacus FCF Real Assets Leaders ETF,1
+APLD,Applied Digital Corporation - Common Stock,APD,"Air Products and Chemicals, Inc. Common Stock",1
+APLD,Applied Digital Corporation - Common Stock,JPLD,JPMorgan Limited Duration Bond ETF,1
+APLD,Applied Digital Corporation - Common Stock,PLD,"Prologis, Inc. Common Stock",1
+TSDD,GraniteShares 2x Short TSLA Daily ETF,MSDD,GraniteShares 2x Short MSTR Daily ETF,1
+TSDD,GraniteShares 2x Short TSLA Daily ETF,SDD,ProShares UltraShort SmallCap600,1
+BBD,Banco Bradesco Sa American Depositary Shares,BLBD,Blue Bird Corporation - Common Stock,1
+BBD,Banco Bradesco Sa American Depositary Shares,BND,Vanguard Total Bond Market ETF,1
+BBD,Banco Bradesco Sa American Depositary Shares,BTBD,"BT Brands, Inc. - Common Stock",1
+BBD,Banco Bradesco Sa American Depositary Shares,WBD,"Warner Bros. Discovery, Inc. - Series A Common Stock",1
+BBD,Banco Bradesco Sa American Depositary Shares,BB,BlackBerry Limited Common Stock,1
+BBD,Banco Bradesco Sa American Depositary Shares,BBDC,"Barings BDC, Inc. Common Stock",1
+BBD,Banco Bradesco Sa American Depositary Shares,BBT,Beacon Financial Corporation Common stock,1
+BBD,Banco Bradesco Sa American Depositary Shares,BBU,Brookfield Business Partners L.P. Limited Partnership Units ,1
+BBD,Banco Bradesco Sa American Depositary Shares,BBW,"Build-A-Bear Workshop, Inc. Common Stock",1
+BBD,Banco Bradesco Sa American Depositary Shares,BBY,"Best Buy Co., Inc. Common Stock",1
+BBD,Banco Bradesco Sa American Depositary Shares,BCD,abrdn Bloomberg All Commodity Longer Dated Strategy K-1 Free ETF,1
+BBD,Banco Bradesco Sa American Depositary Shares,BKD,Brookdale Senior Living Inc. Common Stock,1
+BBD,Banco Bradesco Sa American Depositary Shares,BLD,TopBuild Corp. Common Stock,1
+BBD,Banco Bradesco Sa American Depositary Shares,BUD,Anheuser-Busch Inbev SA Sponsored ADR (Belgium),1
+BBD,Banco Bradesco Sa American Depositary Shares,BYD,Boyd Gaming Corporation Common Stock,1
+BBD,Banco Bradesco Sa American Depositary Shares,DBD,Diebold Nixdorf Incorporated Common stock,1
+BBD,Banco Bradesco Sa American Depositary Shares,IBD,Inspire Corporate Bond ETF,1
+BBD,Banco Bradesco Sa American Depositary Shares,PBD,Invesco Global Clean Energy ETF,1
+OPTX,"Syntec Optics Holdings, Inc. - Class A Common Stock",OPRX,OptimizeRx Corporation - Common Stock,1
+OPTX,"Syntec Optics Holdings, Inc. - Class A Common Stock",OPTXW,"Syntec Optics Holdings, Inc. - Warrant",1
+OPTX,"Syntec Optics Holdings, Inc. - Class A Common Stock",RPTX,Repare Therapeutics Inc. - Common Shares,1
+OPTX,"Syntec Optics Holdings, Inc. - Class A Common Stock",OKTX,Tradr 2X Long OKTA Daily ETF,1
+OPTX,"Syntec Optics Holdings, Inc. - Class A Common Stock",OPTT,"Ocean Power Technologies, Inc. Common Stock",1
+OPTX,"Syntec Optics Holdings, Inc. - Class A Common Stock",OPTU,"Optimum Communications, Inc. Class A common stock",1
+OPTX,"Syntec Optics Holdings, Inc. - Class A Common Stock",OSTX,OS Therapies Incorporated Common Stock,1
+CRWG,Leverage Shares 2X Long CRWV Daily ETF,COWG,Pacer US Large Cap Cash Cows Growth Leaders ETF,1
+CRWG,Leverage Shares 2X Long CRWV Daily ETF,CREG,Smart Powerr Corp. - Common Stock,1
+CRWG,Leverage Shares 2X Long CRWV Daily ETF,CRWD,"CrowdStrike Holdings, Inc. - Class A Common Stock",1
+CRWG,Leverage Shares 2X Long CRWV Daily ETF,CRWS,"Crown Crafts, Inc. - Common Stock",1
+CRWG,Leverage Shares 2X Long CRWV Daily ETF,CRWV,"CoreWeave, Inc. - Class A Common Stock",1
+CRWG,Leverage Shares 2X Long CRWV Daily ETF,GRWG,GrowGeneration Corp. - Common Stock,1
+CRWG,Leverage Shares 2X Long CRWV Daily ETF,CRBG,Corebridge Financial Inc. Common Stock,1
+SMCI,"Super Micro Computer, Inc. - Common Stock",AMCI,AMC Robotics Corporation - Common Stock,1
+SMCI,"Super Micro Computer, Inc. - Common Stock",SMSI,"Smith Micro Software, Inc. - Common Stock",1
+SMCI,"Super Micro Computer, Inc. - Common Stock",SMTI,Sanara MedTech Inc. - Common Stock,1
+SMCI,"Super Micro Computer, Inc. - Common Stock",TMCI,"Treace Medical Concepts, Inc. - Common Stock",1
+SMCI,"Super Micro Computer, Inc. - Common Stock",CMCI,VanEck CMCI Commodity Strategy ETF,1
+SMCI,"Super Micro Computer, Inc. - Common Stock",MCI,Barings Corporate Investors Common Stock,1
+SMCI,"Super Micro Computer, Inc. - Common Stock",MSCI,MSCI Inc. Common Stock,1
+SMCI,"Super Micro Computer, Inc. - Common Stock",SCI,Service Corporation International Common Stock,1
+SMCI,"Super Micro Computer, Inc. - Common Stock",SDCI,USCF SummerHaven Dynamic Commodity Strategy No K-1 Fund,1
+SMCI,"Super Micro Computer, Inc. - Common Stock",SMC,Summit Midstream Corporation Common Stock,1
+SMCI,"Super Micro Computer, Inc. - Common Stock",SMHI,SEACOR Marine Holdings Inc. Common Stock ,1
+CLSK,"CleanSpark, Inc. - Common Stock",CLBK,"Columbia Financial, Inc. - Common Stock",1
+CLSK,"CleanSpark, Inc. - Common Stock",CLIK,Click Holdings Limited - Ordinary Share,1
+CLSK,"CleanSpark, Inc. - Common Stock",CLSKW,"CleanSpark, Inc. - Warrant",1
+CLSK,"CleanSpark, Inc. - Common Stock",CLST,"Catalyst Bancorp, Inc. - common stock",1
+CLSK,"CleanSpark, Inc. - Common Stock",CLS,"Celestica, Inc. Common Stock",1
+SRXH,"SRX Health Solutions, Inc. Common Stock",SIXH,ETC 6 Meridian Hedged Equity Index Option ETF,1
+AIRE,reAlpha Tech Corp. - Common Stock,AIRG,"Airgain, Inc. - Common Stock",1
+AIRE,reAlpha Tech Corp. - Common Stock,AIRJ,AirJoule Technologies Corporation - Class A Common Stock,1
+AIRE,reAlpha Tech Corp. - Common Stock,AIRO,"AIRO Group Holdings, Inc. - Common Stock",1
+AIRE,reAlpha Tech Corp. - Common Stock,AIRS,"AirSculpt Technologies, Inc. - Common Stock",1
+AIRE,reAlpha Tech Corp. - Common Stock,AIRT,"Air T, Inc. - Common Stock",1
+AIRE,reAlpha Tech Corp. - Common Stock,APRE,"Aprea Therapeutics, Inc. - Common Stock",1
+AIRE,reAlpha Tech Corp. - Common Stock,AURE,Aurelion Inc.  - Class A Ordinary Shares,1
+AIRE,reAlpha Tech Corp. - Common Stock,AWRE,"Aware, Inc. - Common Stock",1
+AIRE,reAlpha Tech Corp. - Common Stock,ACRE,Ares Commercial Real Estate Corporation Common Stock,1
+AIRE,reAlpha Tech Corp. - Common Stock,AIR,AAR Corp. Common Stock,1
+AIRE,reAlpha Tech Corp. - Common Stock,AIRI,Air Industries Group Common Stock,1
+AIRE,reAlpha Tech Corp. - Common Stock,AKRE,Akre Focus ETF,1
+AIRE,reAlpha Tech Corp. - Common Stock,ARE,"Alexandria Real Estate Equities, Inc. Common Stock",1
+AIRE,reAlpha Tech Corp. - Common Stock,AVRE,Avantis Real Estate ETF,1
+AIRE,reAlpha Tech Corp. - Common Stock,IRE,Defiance Daily Target 2X Long IREN ETF,1
+AIRE,reAlpha Tech Corp. - Common Stock,JIRE,JPMorgan International Research Enhanced Equity ETF,1
+SQQQ,ProShares UltraPro Short QQQ,GQQQ,Astoria US Quality Growth Kings ETF,1
+SQQQ,ProShares UltraPro Short QQQ,IQQQ,ProShares Nasdaq-100 High Income ETF,1
+SQQQ,ProShares UltraPro Short QQQ,KQQQ,Kurv Technology Titans Select ETF,1
+SQQQ,ProShares UltraPro Short QQQ,MQQQ,Tradr 2X Long Innovation 100 Monthly ETF,1
+SQQQ,ProShares UltraPro Short QQQ,QQQ,"Invesco QQQ Trust, Series 1",1
+SQQQ,ProShares UltraPro Short QQQ,TQQQ,ProShares UltraPro QQQ,1
+SQQQ,ProShares UltraPro Short QQQ,YQQQ,YieldMax Short N100 Option Income Strategy ETF,1
+SQQQ,ProShares UltraPro Short QQQ,CQQQ,Invesco China Technology ETF,1
+C,"Citigroup, Inc. Common Stock",CA,Xtrackers California Municipal Bonds ETF,1
+C,"Citigroup, Inc. Common Stock",CD,Chaince Digital Holdings Inc. - American Ordinary Shares,1
+C,"Citigroup, Inc. Common Stock",CG,The Carlyle Group Inc. - Common Stock,1
+C,"Citigroup, Inc. Common Stock",CV,"CapsoVision, Inc. - Common Stock",1
+C,"Citigroup, Inc. Common Stock",KC,Kingsoft Cloud Holdings Limited - American Depositary Shares,1
+C,"Citigroup, Inc. Common Stock",PC,Premium Catering (Holdings) Limited - Ordinary Shares,1
+C,"Citigroup, Inc. Common Stock",TC,Token Cat Limited - American Depositary Shares,1
+C,"Citigroup, Inc. Common Stock",VC,Visteon Corporation - Common Stock,1
+C,"Citigroup, Inc. Common Stock",A,"Agilent Technologies, Inc. Common Stock",1
+C,"Citigroup, Inc. Common Stock",B,Barrick Mining Corporation Common Shares,1
+C,"Citigroup, Inc. Common Stock",BC,Brunswick Corporation Common Stock,1
+C,"Citigroup, Inc. Common Stock",CB,Chubb Limited  Common Stock,1
+C,"Citigroup, Inc. Common Stock",CC,Chemours Company (The) Common Stock,1
+C,"Citigroup, Inc. Common Stock",CE,Celanese Corporation Common Stock,1
+C,"Citigroup, Inc. Common Stock",CF,"CF Industries Holdings, Inc. Common Stock",1
+C,"Citigroup, Inc. Common Stock",CI,The Cigna Group Common Stock,1
+C,"Citigroup, Inc. Common Stock",CL,Colgate-Palmolive Company Common Stock,1
+C,"Citigroup, Inc. Common Stock",CM,Canadian Imperial Bank of Commerce Common Stock,1
+C,"Citigroup, Inc. Common Stock",CP,Canadian Pacific Kansas City Limited Common Shares,1
+C,"Citigroup, Inc. Common Stock",CR,Crane Company Common Stock,1
+C,"Citigroup, Inc. Common Stock",CW,Curtiss-Wright Corporation Common Stock,1
+C,"Citigroup, Inc. Common Stock",D,"Dominion Energy, Inc. Common Stock",1
+C,"Citigroup, Inc. Common Stock",DC,Dakota Gold Corp. Common Stock,1
+C,"Citigroup, Inc. Common Stock",E,ENI S.p.A. Common Stock,1
+C,"Citigroup, Inc. Common Stock",EC,Ecopetrol S.A. American Depositary Shares,1
+C,"Citigroup, Inc. Common Stock",F,Ford Motor Company Common Stock,1
+C,"Citigroup, Inc. Common Stock",FC,Franklin Covey Company Common Stock,1
+C,"Citigroup, Inc. Common Stock",G,Genpact Limited Common Stock,1
+C,"Citigroup, Inc. Common Stock",H,Hyatt Hotels Corporation Class A Common Stock,1
+C,"Citigroup, Inc. Common Stock",J,Jacobs Solutions Inc. Common Stock,1
+C,"Citigroup, Inc. Common Stock",L,Loews Corporation Common Stock,1
+C,"Citigroup, Inc. Common Stock",LC,LendingClub Corporation Common Stock,1
+C,"Citigroup, Inc. Common Stock",M,Macy's Inc Common Stock,1
+C,"Citigroup, Inc. Common Stock",MC,Moelis & Company Class A Common Stock,1
+C,"Citigroup, Inc. Common Stock",NC,"NACCO Industries, Inc. Common Stock",1
+C,"Citigroup, Inc. Common Stock",O,Realty Income Corporation Common Stock,1
+C,"Citigroup, Inc. Common Stock",OC,Owens Corning Inc Common Stock New,1
+C,"Citigroup, Inc. Common Stock",Q,"Qnity Electronics, Inc. Common Stock",1
+C,"Citigroup, Inc. Common Stock",R,"Ryder System, Inc. Common Stock",1
+C,"Citigroup, Inc. Common Stock",RC,Ready Capital Corporation Common Stock,1
+C,"Citigroup, Inc. Common Stock",S,"SentinelOne, Inc. Class A Common Stock",1
+C,"Citigroup, Inc. Common Stock",T,AT&T Inc.,1
+C,"Citigroup, Inc. Common Stock",U,Unity Software Inc. Common Stock,1
+C,"Citigroup, Inc. Common Stock",V,Visa Inc.,1
+C,"Citigroup, Inc. Common Stock",W,Wayfair Inc. Class A Common Stock,1
+C,"Citigroup, Inc. Common Stock",XC,WisdomTree True Emerging Markets Fund,1
+BMY,Bristol-Myers Squibb Company Common Stock,BMR,Beamr Imaging Ltd. - Ordinary Share,1
+BMY,Bristol-Myers Squibb Company Common Stock,BSMY,Invesco BulletShares 2034 Municipal Bond ETF,1
+BMY,Bristol-Myers Squibb Company Common Stock,BSY,"Bentley Systems, Incorporated - Class B Common Stock",1
+BMY,Bristol-Myers Squibb Company Common Stock,BAMY,Brookstone Yield ETF,1
+BMY,Bristol-Myers Squibb Company Common Stock,BBY,"Best Buy Co., Inc. Common Stock",1
+BMY,Bristol-Myers Squibb Company Common Stock,BGY,Blackrock Enhanced International Dividend Trust,1
+BMY,Bristol-Myers Squibb Company Common Stock,BMI,"Badger Meter, Inc. Common Stock",1
+BMY,Bristol-Myers Squibb Company Common Stock,BMO,Bank Of Montreal Common Stock,1
+BMY,Bristol-Myers Squibb Company Common Stock,BNY,BlackRock New York Municipal Income Trust,1
+BMY,Bristol-Myers Squibb Company Common Stock,BY,"Byline Bancorp, Inc. Common Stock",1
+BMY,Bristol-Myers Squibb Company Common Stock,BYM,Blackrock Municipal Income Quality Trust Common Shares of Beneficial Interest,1
+BMY,Bristol-Myers Squibb Company Common Stock,FMY,First Trust Mortgage Income Fund Common Shares of Beneficial Interest,1
+BMY,Bristol-Myers Squibb Company Common Stock,HMY,Harmony Gold Mining Company Limited,1
+BMY,Bristol-Myers Squibb Company Common Stock,PBMY,PGIM S&P 500 Buffer 20 ETF - May,1
+TTD,"The Trade Desk, Inc. - Class A Common Stock",DTD,WisdomTree U.S. Total Dividend Fund,1
+TTD,"The Trade Desk, Inc. - Class A Common Stock",ETD,Ethan Allen Interiors Inc. Common Stock,1
+TTD,"The Trade Desk, Inc. - Class A Common Stock",HTD,John Hancock Tax Advantaged Dividend Income Fund Common Shares of Beneficial Interest,1
+TTD,"The Trade Desk, Inc. - Class A Common Stock",MTD,"Mettler-Toledo International, Inc. Common Stock",1
+TTD,"The Trade Desk, Inc. - Class A Common Stock",TD,Toronto Dominion Bank (The) Common Stock,1
+TTD,"The Trade Desk, Inc. - Class A Common Stock",THD,iShares MSCI Thailand ETF,1
+TTD,"The Trade Desk, Inc. - Class A Common Stock",TLTD,FlexShares Morningstar Developed Markets ex-US Factor Tilt Index Fund,1
+TTD,"The Trade Desk, Inc. - Class A Common Stock",TT,Trane Technologies plc,1
+TTD,"The Trade Desk, Inc. - Class A Common Stock",TTC,Toro Company (The) Common Stock,1
+TTD,"The Trade Desk, Inc. - Class A Common Stock",TTI,"Tetra Technologies, Inc. Common Stock",1
+TTD,"The Trade Desk, Inc. - Class A Common Stock",TYD,Direxion Daily 10-Yr Treasury Bull 3x Shrs,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AGH,Aureus Greenway Holdings Inc. - Common Stock,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AHG,Akso Health Group - American Depositary Shares,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AXG,Solowin Holdings - Class A Ordinary Share,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AZ,A2Z Cust2Mate Solutions Corp. - Common Shares,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),CG,The Carlyle Group Inc. - Common Stock,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),JG,Aurora Mobile Limited - American Depositary Shares,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),KG,"Kestrel Group, Ltd. - Common Stock",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),UG,"United-Guardian, Inc. - Common Stock",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),ZG,"Zillow Group, Inc. - Class A Common Stock",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),A,"Agilent Technologies, Inc. Common Stock",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AA,Alcoa Corporation Common Stock ,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AB,AllianceBernstein Holding L.P.  Units,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),ABG,Asbury Automotive Group Inc Common Stock,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AD,"Array Digital Infrastructure, Inc. Common Shares",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AEG,Aegon Ltd. New York Registry Shares,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AFG,"American Financial Group, Inc. Common Stock",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AGL,"agilon health, inc. Common Stock",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AGM,Federal Agricultural Mortgage Corporation Common Stock,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AGO,Assured Guaranty Ltd. Common Stock,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AGX,"Argan, Inc. Common Stock",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AI,"C3.ai, Inc. Class A Common Stock",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AIG,"American International Group, Inc. New Common Stock",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AJG,Arthur J. Gallagher & Co. Common Stock,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AL,Air Lease Corporation Class A Common Stock,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),ALG,"Alamo Group, Inc. Common Stock",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AM,Antero Midstream Corporation Common Stock,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AMG,"Affiliated Managers Group, Inc. Common Stock",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AN,"AutoNation, Inc. Common Stock",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AP,Ampco-Pittsburgh Corporation Common Stock,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),APG,APi Group Corporation Common Stock,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AR,Antero Resources Corporation Common Stock,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AS,"Amer Sports, Inc. Ordinary Shares",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),ASG,"Liberty All-Star Growth Fund, Inc.",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AU,AngloGold Ashanti PLC Ordinary Shares,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),AX,"Axos Financial, Inc. Common Stock",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),BG,Bunge Limited Common Shares,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),CAG,"ConAgra Brands, Inc. Common Stock",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),DG,Dollar General Corporation Common Stock,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),EG,"Everest Group, Ltd. Common Stock",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),FG,"F&G Annuities & Life, Inc. Common Stock",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),G,Genpact Limited Common Stock,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),HG,"Hamilton Insurance Group, Ltd. Class B Common Shares",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),IAG,Iamgold Corporation Ordinary Shares,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),IG,Principal Investment Grade Corporate Active ETF,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),MG,Mistras Group Inc Common Stock,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),NG,Novagold Resources Inc.,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),PAG,"Penske Automotive Group, Inc. Common Stock",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),PG,Procter & Gamble Company (The) Common Stock,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),SG,"Sweetgreen, Inc. Class A Common Stock",1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),TG,Tredegar Corporation Common Stock,1
+AG,First Majestic Silver Corp. Ordinary Shares (Canada),VG,"Venture Global, Inc. Class A common stock",1
+RENX,RenX Enterprises Corp. - Common Stock,CENX,Century Aluminum Company - Common Stock,1
+RENX,RenX Enterprises Corp. - Common Stock,RENT,"Rent the Runway, Inc. - Class A Common Stock",1
+RENX,RenX Enterprises Corp. - Common Stock,RGNX,REGENXBIO Inc. - Common Stock,1
+RENX,RenX Enterprises Corp. - Common Stock,TENX,"Tenax Therapeutics, Inc. - Common Stock",1
+RENX,RenX Enterprises Corp. - Common Stock,REPX,"Riley Exploration Permian, Inc. Common Stock",1
+RENX,RenX Enterprises Corp. - Common Stock,REX,REX American Resources Corporation,1
+QUBT,Quantum Computing Inc. - Common Stock,UBT,ProShares Ultra 20+ Year Treasury,1
+TSLQ,Tradr 2X Short TSLA Daily ETF,TSLA,"Tesla, Inc.  - Common Stock",1
+TSLQ,Tradr 2X Short TSLA Daily ETF,TSLX,"Sixth Street Specialty Lending, Inc. Common Stock",1
+TSLQ,Tradr 2X Short TSLA Daily ETF,TSQ,"Townsquare Media, Inc. Class A Common Stock",1
+BULL,Webull Corporation - Class A Ordinary Shares,MULL,GraniteShares 2x Long MU Daily ETF,1
+BULL,Webull Corporation - Class A Ordinary Shares,BALL,Ball Corporation Common Stock,1
+BULL,Webull Corporation - Class A Ordinary Shares,BILL,"BILL Holdings, Inc. Common Stock",1
+BULL,Webull Corporation - Class A Ordinary Shares,BURL,"Burlington Stores, Inc. Common Stock",1
+BULL,Webull Corporation - Class A Ordinary Shares,DULL,"MicroSectors Gold -3X Inverse Leveraged ETNs due January 29, 2043",1
+BULL,Webull Corporation - Class A Ordinary Shares,QULL,ETRACS 2x Leveraged MSCI US Quality Factor TR ETN,1
+SOUN,"SoundHound AI, Inc. - Class A Common Stock",SUUN,PowerBank Corporation - Common Stock,1
+SOUN,"SoundHound AI, Inc. - Class A Common Stock",SOMN,Southern Company (The) 2025 Series A Corporate Units,1
+SOUN,"SoundHound AI, Inc. - Class A Common Stock",SON,Sonoco Products Company Common Stock,1
+SOUN,"SoundHound AI, Inc. - Class A Common Stock",SUN,Sunoco LP Common Units representing limited partner interests,1
+RR,Richtech Robotics Inc. - Class B Common Stock,BRR,"ProCap Financial, Inc. - Common Stock",1
+RR,Richtech Robotics Inc. - Class B Common Stock,ORR,Militia Long/Short Equity ETF,1
+RR,Richtech Robotics Inc. - Class B Common Stock,RMR,The RMR Group Inc. - Class A Common Stock,1
+RR,Richtech Robotics Inc. - Class B Common Stock,RRR,"Red Rock Resorts, Inc. - Class A Common Stock",1
+RR,Richtech Robotics Inc. - Class B Common Stock,AR,Antero Resources Corporation Common Stock,1
+RR,Richtech Robotics Inc. - Class B Common Stock,ARR,"ARMOUR Residential REIT, Inc.",1
+RR,Richtech Robotics Inc. - Class B Common Stock,BR,"Broadridge Financial Solutions, Inc. Common Stock",1
+RR,Richtech Robotics Inc. - Class B Common Stock,CR,Crane Company Common Stock,1
+RR,Richtech Robotics Inc. - Class B Common Stock,FR,"First Industrial Realty Trust, Inc. Common Stock",1
+RR,Richtech Robotics Inc. - Class B Common Stock,HR,Healthcare Realty Trust Incorporated Common Stock,1
+RR,Richtech Robotics Inc. - Class B Common Stock,IR,Ingersoll Rand Inc. Common Stock,1
+RR,Richtech Robotics Inc. - Class B Common Stock,KR,Kroger Company (The) Common Stock,1
+RR,Richtech Robotics Inc. - Class B Common Stock,OR,OR Royalties Inc. Common Shares,1
+RR,Richtech Robotics Inc. - Class B Common Stock,PR,Permian Resources Corporation Class A Common Stock,1
+RR,Richtech Robotics Inc. - Class B Common Stock,R,"Ryder System, Inc. Common Stock",1
+RR,Richtech Robotics Inc. - Class B Common Stock,RA,Brookfield Real Assets Income Fund Inc. Common Stock,1
+RR,Richtech Robotics Inc. - Class B Common Stock,RB,ProShares Russell 2000 Dynamic Buffer ETF,1
+RR,Richtech Robotics Inc. - Class B Common Stock,RC,Ready Capital Corporation Common Stock,1
+RR,Richtech Robotics Inc. - Class B Common Stock,RF,Regions Financial Corporation Common Stock,1
+RR,Richtech Robotics Inc. - Class B Common Stock,RGR,"Sturm, Ruger & Company, Inc. Common Stock",1
+RR,Richtech Robotics Inc. - Class B Common Stock,RH,RH Common Stock,1
+RR,Richtech Robotics Inc. - Class B Common Stock,RL,Ralph Lauren Corporation Common Stock,1
+RR,Richtech Robotics Inc. - Class B Common Stock,RM,Regional Management Corp. Common Stock,1
+RR,Richtech Robotics Inc. - Class B Common Stock,RNR,RenaissanceRe Holdings Ltd. Common Stock,1
+RR,Richtech Robotics Inc. - Class B Common Stock,RRC,Range Resources Corporation Common Stock,1
+RR,Richtech Robotics Inc. - Class B Common Stock,RRX,Regal Rexnord Corporation Common Stock,1
+RR,Richtech Robotics Inc. - Class B Common Stock,RS,"Reliance, Inc. Common Stock",1
+RR,Richtech Robotics Inc. - Class B Common Stock,RW,Rainwater Equity ETF,1
+RR,Richtech Robotics Inc. - Class B Common Stock,RWR,State Street SPDR Dow Jones REIT ETF,1
+RR,Richtech Robotics Inc. - Class B Common Stock,RY,Royal Bank Of Canada Common Stock,1
+RR,Richtech Robotics Inc. - Class B Common Stock,SR,Spire Inc. Common Stock,1
+RR,Richtech Robotics Inc. - Class B Common Stock,TR,"Tootsie Roll Industries, Inc. Common Stock",1
+META,"Meta Platforms, Inc. - Class A Common Stock",MCTA,Charming Medical Limited - Class A Ordinary Shares,1
+META,"Meta Platforms, Inc. - Class A Common Stock",MEHA,"Functional Brands, Inc. - Common Stock",1
+META,"Meta Platforms, Inc. - Class A Common Stock",METC,"Ramaco Resources, Inc. - Class A Common Stock",1
+META,"Meta Platforms, Inc. - Class A Common Stock",QETA,Quetta Acquisition Corporation - Common Stock,1
+META,"Meta Platforms, Inc. - Class A Common Stock",BETA,"Beta Technologies, Inc. Class A Common Stock",1
+META,"Meta Platforms, Inc. - Class A Common Stock",MET,"MetLife, Inc. Common Stock",1
+META,"Meta Platforms, Inc. - Class A Common Stock",MET$A,"MetLife, Inc. Preferred Series A Floating Rate",1
+META,"Meta Platforms, Inc. - Class A Common Stock",ZETA,Zeta Global Holdings Corp. Class A Common Stock,1
