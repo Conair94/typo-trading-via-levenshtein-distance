@@ -1,0 +1,49 @@
+
+==================================================
+  INDIVIDUAL TYPO ANALYSIS: BAC vs MAC
+==================================================
+Data Points: 2239 (7 trading days)
+Overall Correlation: 0.0301
+Buying Pressure Correlation (Target > 0): -0.1322
+
+--- Time of Day Analysis (Hypothesis 1) ---
+Correlation by 30m Bucket:
+Time_Bucket
+14:30:00   -0.224803
+15:00:00    0.339432
+15:30:00    0.360512
+16:00:00    0.166418
+16:30:00    0.306558
+17:00:00    0.186919
+17:30:00    0.122566
+18:00:00    0.132136
+18:30:00   -0.007368
+19:00:00    0.295300
+19:30:00    0.209672
+20:00:00    0.194141
+20:30:00    0.090082
+
+--- Buying Pressure by Time (Hypothesis 2) ---
+Correlation when Target is Up, by Bucket:
+Time_Bucket
+14:30:00   -0.314670
+15:00:00    0.249200
+15:30:00    0.271472
+16:00:00    0.049450
+16:30:00    0.221193
+17:00:00    0.150459
+17:30:00    0.002699
+18:00:00    0.071990
+18:30:00   -0.064404
+19:00:00    0.281319
+19:30:00   -0.253994
+20:00:00    0.329243
+20:30:00   -0.001462
+
+--- Alpha Generation (Best Time: 20:00:00) ---
+Simulated Strategy: Long BAC / Short MAC
+Hedge Ratio: 0.33
+Alpha (Excess Return): -0.19 bps per interval
+Volatility Reduction: -5.61%
+Sharpe Ratio Improvement: 0.0649 -> 0.0099
+==================================================
