@@ -94,12 +94,13 @@ def analyze_intraday_correlation(target_df, candidate_df, target_ticker, candida
 
     # Calculate Correlation per Bucket
     # We aggregate all days (5 days) into these time slots
-    bucket_corrs = df.groupby('Time_Bucket').apply(
+    # Explicitly select columns to silence FutureWarning about grouping keys
+    bucket_corrs = df.groupby('Time_Bucket')[['Target_Ret', 'Candidate_Ret']].apply(
         lambda x: x['Target_Ret'].corr(x['Candidate_Ret'])
     )
     
     # Calculate "Buying Pressure" Correlation (Target Returns > 0) per bucket
-    bucket_corrs_buy = df[df['Target_Ret'] > 0].groupby('Time_Bucket').apply(
+    bucket_corrs_buy = df[df['Target_Ret'] > 0].groupby('Time_Bucket')[['Target_Ret', 'Candidate_Ret']].apply(
         lambda x: x['Target_Ret'].corr(x['Candidate_Ret'])
     )
 
