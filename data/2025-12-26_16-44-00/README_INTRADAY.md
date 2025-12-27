@@ -1,5 +1,5 @@
 # Intraday Typo Analysis Summary (1-Minute Intervals)
-**Run Date:** 2025-12-26 17:05:55
+**Run Date:** 2025-12-26 17:31:29
 **Data Period:** Last 5 Days (Intraday)
 
 ## Hypotheses
@@ -8,9 +8,9 @@
 3. **Mean Reversion:** These correlations are temporary inefficiencies. As traders realize errors, the "typo" stock price should revert, making this a short-term mean-reversion play.
 
 ## Overview
-* **Total Pairs Analyzed:** 957
+* **Total Pairs Analyzed:** 960
 * **Focus:** Correlation of returns when Target stock is **Buying (Up)**.
-* **Average Max Correlation:** 0.4715
+* **Average Max Correlation:** 0.4716
 
 ## Time of Day Analysis
 **When is the correlation strongest?**
@@ -19,13 +19,13 @@
 ## Top 10 Pairs with Highest Intraday Buying Pressure Correlation
 | Target | Name | Candidate | Name | Best Time | Buying Corr (Best Time) | Overall Corr |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| SMCI | Super Micro Computer, Inc. - Common Stock | MCI | Barings Corporate Investors Common Stock | 18:30:00 | 1.0000 | -0.1255 |
-| C | Citigroup, Inc. Common Stock | CV | CapsoVision, Inc. - Common Stock | 19:00:00 | 1.0000 | 0.0485 |
-| BMY | Bristol-Myers Squibb Company Common Stock | BAMY | Brookstone Yield ETF | 17:00:00 | 1.0000 | -0.1492 |
-| BMY | Bristol-Myers Squibb Company Common Stock | BSMY | Invesco BulletShares 2034 Municipal Bond ETF | 14:30:00 | 1.0000 | -0.0845 |
-| BAC | Bank of America Corporation Common Stock | BFC | Bank First Corporation - Common Stock | 16:00:00 | 1.0000 | 0.0129 |
-| AAL | American Airlines Group, Inc. - Common Stock | AVAL | Grupo Aval Acciones y Valores S.A. ADR (Each representing 20 preferred shares) | 15:00:00 | 1.0000 | 0.1352 |
-| C | Citigroup, Inc. Common Stock | NC | NACCO Industries, Inc. Common Stock | 19:00:00 | 1.0000 | -0.2925 |
-| CRH | CRH PLC Ordinary Shares | ERH | Allspring Utilities and High Income Fund Common Shares | 19:00:00 | 1.0000 | -0.1591 |
-| AAL | American Airlines Group, Inc. - Common Stock | GAL | State Street Global Allocation ETF | 16:00:00 | 1.0000 | -0.0453 |
-| C | Citigroup, Inc. Common Stock | CA | Xtrackers California Municipal Bonds ETF | 14:30:00 | 1.0000 | 0.4655 |
+| CMG | Chipotle Mexican Grill, Inc. Common Stock | CMT | Core Molding Technologies Inc Common Stock | 16:30:00 | 1.0000 | -0.0782 |
+| CIFR | Cipher Mining Inc. - Common Stock | RIFR | Russell Investments Global Infrastructure ETF | 15:00:00 | 1.0000 | -0.4987 |
+| AAPL | Apple Inc. - Common Stock | PAPL | Pineapple Financial Inc. Common Stock | 17:30:00 | 1.0000 | -0.0915 |
+| FOLD | Amicus Therapeutics, Inc. - Common Stock | BOLD | Boundless Bio, Inc. - Common Stock | 16:30:00 | 1.0000 | -0.0153 |
+| BBD | Banco Bradesco Sa American Depositary Shares | IBD | Inspire Corporate Bond ETF | 16:30:00 | 1.0000 | 0.0488 |
+| MU | Micron Technology, Inc. - Common Stock | MI | NFT Limited Class A Ordinary Share | 15:00:00 | 1.0000 | -0.3126 |
+| BBD | Banco Bradesco Sa American Depositary Shares | BCD | abrdn Bloomberg All Commodity Longer Dated Strategy K-1 Free ETF | 19:00:00 | 1.0000 | -0.2896 |
+| BITO | ProShares Bitcoin ETF | NITO | N2OFF, Inc. - Common Stock | 17:00:00 | 1.0000 | -0.0806 |
+| TQQQ | ProShares UltraPro QQQ | MQQQ | Tradr 2X Long Innovation 100 Monthly ETF | 19:00:00 | 1.0000 | 0.7265 |
+| BBD | Banco Bradesco Sa American Depositary Shares | PBD | Invesco Global Clean Energy ETF | 19:30:00 | 1.0000 | 0.1414 |

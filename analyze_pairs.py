@@ -92,17 +92,22 @@ def analyze_intraday_correlation(target_df, candidate_df, target_ticker, candida
 
     df['Time_Bucket'] = df['Time'].apply(floor_time)
 
+    # Define safe correlation helper to avoid RuntimeWarning for small/constant slices
+    def safe_corr(x):
+        if len(x) < 2:
+            return np.nan
+        # Avoid warnings for constant values (if std is 0)
+        if x['Target_Ret'].std() == 0 or x['Candidate_Ret'].std() == 0:
+            return np.nan
+        return x['Target_Ret'].corr(x['Candidate_Ret'])
+
     # Calculate Correlation per Bucket
     # We aggregate all days (5 days) into these time slots
     # Explicitly select columns to silence FutureWarning about grouping keys
-    bucket_corrs = df.groupby('Time_Bucket')[['Target_Ret', 'Candidate_Ret']].apply(
-        lambda x: x['Target_Ret'].corr(x['Candidate_Ret'])
-    )
+    bucket_corrs = df.groupby('Time_Bucket')[['Target_Ret', 'Candidate_Ret']].apply(safe_corr)
     
     # Calculate "Buying Pressure" Correlation (Target Returns > 0) per bucket
-    bucket_corrs_buy = df[df['Target_Ret'] > 0].groupby('Time_Bucket')[['Target_Ret', 'Candidate_Ret']].apply(
-        lambda x: x['Target_Ret'].corr(x['Candidate_Ret'])
-    )
+    bucket_corrs_buy = df[df['Target_Ret'] > 0].groupby('Time_Bucket')[['Target_Ret', 'Candidate_Ret']].apply(safe_corr)
 
     # Find the Best Time Bucket (Max Correlation)
     # We focus on the "Buying Pressure" scenario as requested
