@@ -192,12 +192,15 @@ def main():
     print_report(results)
     
     # Save to file
-    filename = f"analysis_{target}_vs_{candidate}.txt"
+    output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "output")
+    os.makedirs(output_dir, exist_ok=True)
+    
+    filename = os.path.join(output_dir, f"analysis_{target}_vs_{candidate}.txt")
     with open(filename, "w") as f:
         sys.stdout = f
         print_report(results)
         sys.stdout = sys.__stdout__
-    print(f"\nReport saved to {os.getcwd()}/{filename}")
+    print(f"\nReport saved to {filename}")
 
 if __name__ == "__main__":
     main()

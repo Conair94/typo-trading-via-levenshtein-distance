@@ -1,0 +1,48 @@
+
+==================================================
+  INDIVIDUAL TYPO ANALYSIS: AMD vs AMS
+==================================================
+Data Points: 83 (7 trading days)
+Overall Correlation: -0.0014
+Buying Pressure Correlation (Target > 0): 0.0005
+
+--- Time of Day Analysis (Hypothesis 1) ---
+Correlation by 30m Bucket:
+Time_Bucket
+14:30:00         NaN
+15:00:00         NaN
+15:30:00         NaN
+16:00:00         NaN
+16:30:00         NaN
+17:00:00         NaN
+17:30:00         NaN
+18:00:00         NaN
+18:30:00         NaN
+19:00:00         NaN
+19:30:00         NaN
+20:00:00         NaN
+20:30:00    0.283514
+
+--- Buying Pressure by Time (Hypothesis 2) ---
+Correlation when Target is Up, by Bucket:
+Time_Bucket
+14:30:00         NaN
+15:00:00         NaN
+15:30:00         NaN
+16:00:00         NaN
+16:30:00         NaN
+17:00:00         NaN
+17:30:00         NaN
+18:00:00         NaN
+18:30:00         NaN
+19:00:00         NaN
+20:00:00         NaN
+20:30:00    0.218647
+
+--- Alpha Generation (Best Time: 20:30:00) ---
+Simulated Strategy: Long AMD / Short AMS
+Hedge Ratio: 0.22
+Alpha (Excess Return): -3.08 bps per interval
+Volatility Reduction: -8.57%
+Sharpe Ratio Improvement: -0.2330 -> -0.3442
+==================================================
