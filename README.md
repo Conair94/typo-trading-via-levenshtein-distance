@@ -23,15 +23,19 @@ The solution is built as a modular Python ETL (Extract, Transform, Load) pipelin
     *   **Intraday Minute-Level Analysis:** Fetches 1-minute interval data to detect granular correlation spikes.
     *   **Time-of-Day Bucketing:** Aggregates correlation data into 30-minute buckets to test the "Market Open" hypothesis.
     *   **Buying Pressure Filter:** specifically isolates periods where the Target stock has positive returns to check if the Candidate follows.
+    *   **Keyboard Proximity Filter:** Identifies "fat finger" typos where substituted characters are physical neighbors on a QWERTY keyboard (e.g., R/T, N/M) to prioritize genuine execution errors.
+    *   **Hedging Simulation:** Backtests a theoretical Long Target / Short Candidate strategy to calculate potential Alpha and Sharpe Ratio improvement.
 *   **Data Engineering:** 
     *   Timestamped data versioning for audit trails.
     *   Local SQLite caching for rapid prototyping.
     *   **Google BigQuery** integration for scalable, cloud-native data warehousing.
 
 ### Key Features
-*   **Smart Filtering:** Systematically excludes "intentional" correlations (e.g., `TSLA` vs `TSLL` - Direxion Daily TSLA Bull) using regex-based heuristic analysis of security names.
+*   **Smart Filtering:** Systematically excludes "intentional" correlations (e.g., `TSLA` vs `TSLL` - Direxion Daily TSLA Bull) using regex-based heuristic analysis.
+*   **Fat Finger Detection:** Uses QWERTY adjacency maps to flag high-probability typo pairs.
+*   **Alpha Backtesting:** Automatically calculates the theoretical PnL (Alpha in basis points) of a correlation-weighted hedging strategy.
 *   **Event-Driven Analysis:** Focuses specifically on high-volume days, avoiding the noise of long-term beta.
-*   **Cloud Ready:** Includes a dedicated module to push processed datasets to Google Cloud Platform for visualization in Looker or further analysis in SQL.
+*   **Cloud Ready:** Includes a dedicated module to push processed datasets to Google Cloud Platform.
 
 ### Installation & Usage
 
@@ -49,7 +53,7 @@ Downloads fresh ticker lists and identifies potential typo pairs, filtering out 
 ```bash
 python3 fetch_data.py
 ```
-*   *Output:* Creates a timestamped directory (e.g., `data/2023-10-27_14-00-00/`) containing `typo_candidates.csv`.
+*   *Output:* Creates a timestamped directory containing `typo_candidates.csv` (now with `Keyboard_Proximate` flag).
 
 ### 3. Quantitative Analysis
 Fetches historical OHLCV data for identified pairs and computes correlation metrics during volume spikes.
@@ -59,7 +63,10 @@ python3 analyze_pairs.py [OPTIONAL_DATA_DIR]
 *   *Output:*
     *   `intraday_results.csv`: Detailed correlation metrics for every pair.
     *   `typo_trading.db`: SQLite database for SQL queries.
-    *   `README_INTRADAY.md`: **Auto-generated statistical summary** including average correlations, standard deviation, and the top 10 most correlated pairs during high-volume events.
+    *   `README_INTRADAY.md`: **Auto-generated statistical summary** including:
+        *   Average correlations for All vs. Keyboard Proximate pairs.
+        *   Theoretical Hedging Performance (Alpha & Sharpe).
+        *   Top 10 most correlated pairs during high-volume events.
 *   *Note:* By default, analyzes the most recent timestamped folder in `data/`. You can specify a different folder as an argument.
 
 #### 4. Data Warehousing (Optional)

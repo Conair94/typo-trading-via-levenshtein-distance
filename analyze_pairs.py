@@ -129,7 +129,46 @@ def analyze_intraday_correlation(target_df, candidate_df, target_ticker, candida
     # This supports the hypothesis that the effect is short-term/transient.
     corr_lift = max_corr - overall_corr
 
-    return {
+    # --- Hedging Simulation ---
+    # Simulate a theoretical Long Target / Short Candidate strategy during the best time bucket
+    # We assume we enter at the start of the bucket and exit at the end (simplification)
+    # Weighting: Hedge Ratio = Correlation * (Vol Target / Vol Candidate)
+    # But for simplicity here we use Beta = Cov(T,C) / Var(C) or just correlation weighting if volatility data is messy.
+    # Let's use a simple Correlation-weighted hedge: Short (Correlation) amount of Candidate for every $1 Long Target.
+    
+    hedging_stats = {}
+    if best_time in bucket_corrs_buy.index:
+        # Filter for the specific time bucket across all days
+        bucket_data = df[df['Time_Bucket'] == best_time].copy()
+        if not bucket_data.empty:
+             # Calculate realized returns in this bucket
+            t_ret = bucket_data['Target_Ret']
+            c_ret = bucket_data['Candidate_Ret']
+            
+            # Simple Hedge: Short Candidate with ratio = max_corr
+            # Return = Long Target - (Hedge Ratio * Short Candidate)
+            # This is a "Naive" hedge for directional spillover
+            hedge_ratio = max_corr
+            hedged_returns = t_ret - (hedge_ratio * c_ret)
+            
+            # Alpha: Difference between Hedged Strategy and Unhedged Target
+            # We want to see if the hedge reduces volatility or improves risk-adjusted return
+            avg_target_ret = t_ret.mean()
+            avg_hedged_ret = hedged_returns.mean()
+            
+            # Sharpe-like improvement (Mean / Std)
+            target_sharpe = t_ret.mean() / t_ret.std() if t_ret.std() > 0 else 0
+            hedged_sharpe = hedged_returns.mean() / hedged_returns.std() if hedged_returns.std() > 0 else 0
+            
+            hedging_stats = {
+                'Hedged_Return_Mean': avg_hedged_ret,
+                'Unhedged_Return_Mean': avg_target_ret,
+                'Hedged_Sharpe': hedged_sharpe,
+                'Unhedged_Sharpe': target_sharpe,
+                'Alpha_BasisPoints': (avg_hedged_ret - avg_target_ret) * 10000
+            }
+
+    result = {
         'Target': target_ticker,
         'Candidate': candidate_ticker,
         'Overall_Corr': overall_corr,
@@ -139,6 +178,8 @@ def analyze_intraday_correlation(target_df, candidate_df, target_ticker, candida
         # Also return correlation during that time slot for ALL moves (not just up) for context
         'General_Corr_At_Best_Time': bucket_corrs.get(best_time, np.nan)
     }
+    result.update(hedging_stats)
+    return result
 
 def save_to_db(results, db_path):
     conn = sqlite3.connect(db_path)
@@ -210,13 +251,24 @@ If "Keyboard Proximate" pairs demonstrate higher average correlation, they repre
     # Top 10 Positive
     top_10 = df.sort_values(by='Best_Time_Corr', ascending=False).head(10)
     
-    content += "| Target | Name | Candidate | Name | Best Time | Buying Corr (Best Time) | Overall Corr |\n"
-    content += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
+    # Hedging Stats Summary
+    avg_alpha = top_10['Alpha_BasisPoints'].mean() if 'Alpha_BasisPoints' in top_10.columns else 0.0
+    
+    content += f"""
+## Theoretical Hedging Performance (Top 10 Pairs)
+Simulating a **Long Target / Short Candidate** strategy (Hedge Ratio = Correlation) during the Best Time Bucket.
+*   **Average Alpha (Excess Return):** {avg_alpha:.2f} bps per minute
+"""
+
+    content += "| Target | Name | Candidate | Name | Best Time | Buying Corr | Alpha (bps) | Hedged Sharpe |\n"
+    content += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
     
     for _, row in top_10.iterrows():
         t_name = safe_str(row.get('Target_Name', 'N/A'))
         c_name = safe_str(row.get('Candidate_Name', 'N/A'))
-        content += f"| {row['Target']} | {t_name} | {row['Candidate']} | {c_name} | {row['Best_Time']} | {row['Best_Time_Corr']:.4f} | {row['Overall_Corr']:.4f} |\n"
+        alpha = row.get('Alpha_BasisPoints', 0.0)
+        sharpe = row.get('Hedged_Sharpe', 0.0)
+        content += f"| {row['Target']} | {t_name} | {row['Candidate']} | {c_name} | {row['Best_Time']} | {row['Best_Time_Corr']:.4f} | {alpha:.2f} | {sharpe:.2f} |\n"
 
     with open(readme_path, "w") as f:
         f.write(content)
