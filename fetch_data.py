@@ -90,39 +90,43 @@ def get_top_volume_tickers(tickers, limit=100):
     
     return top_tickers.index.tolist()
 
-def is_correlated_by_design(target, candidate, candidate_name):
+def is_correlated_by_design(target, candidate, target_name, candidate_name):
     """
     Checks if the candidate is likely correlated by design to the target.
     Logic:
     1. If candidate name contains the target ticker.
-       - If target len > 3, substring match is sufficient (e.g. 'TSLA' in 'TSLA Bull').
-       - If target len <= 3, require whole word match to avoid false positives (e.g. 'M' in 'MGM').
-    2. Specific exclusion for Crypto/Currency trust confusion (e.g. ETH vs ETHA).
+    2. If both names contain specific asset keywords (e.g. BITCOIN, ETHER).
+    3. If candidate is a fund/trust and tickers share a prefix.
     """
     
     # Normalize
-    cand_name_upper = candidate_name.upper()
-    target_upper = target.upper()
+    target = target.upper()
+    candidate = candidate.upper()
+    target_name = target_name.upper()
+    candidate_name = candidate_name.upper()
     
     # 1. Ticker in Name Check
-    if len(target_upper) > 3:
-        if target_upper in cand_name_upper:
+    if len(target) > 3:
+        if target in candidate_name:
             return True
     else:
         # Use regex boundary \b for short tickers
-        if re.search(r'\b' + re.escape(target_upper) + r'\b', cand_name_upper):
+        if re.search(r'\b' + re.escape(target) + r'\b', candidate_name):
             return True
 
-    # 2. Crypto/Currency Heuristics
-    # If one is a trust/ETF for the other's underlying asset class (often implied by similar tickers starting with same letters)
-    # Example: ETH (stock) vs ETHA (Ethereum Trust). 
-    # Heuristic: If candidate name contains "BITCOIN", "ETHER", "CRYPTO", "TRUST", "ETF" 
-    # AND the tickers share the first 2-3 letters, it's likely a product relation, not a typo.
-    
-    suspect_keywords = ["BITCOIN", "ETHER", "ETHEREUM", "CRYPTO", "TRUST", "ETF", "FUND", "SHARES"]
-    if any(k in cand_name_upper for k in suspect_keywords):
-        # If tickers start with same 2 chars (e.g. ET..), assume relation if one is a Fund.
-        if target_upper[:2] == candidate[:2]:
+    # 2. Shared Asset Class Check
+    # If both names mention the same specific underlying asset, they are correlated.
+    asset_keywords = ["BITCOIN", "ETHER", "ETHEREUM", "CRYPTO", "GOLD", "SILVER", "OIL", "VIX", "TREASURY", "BOND"]
+    for asset in asset_keywords:
+        if asset in target_name and asset in candidate_name:
+            return True
+
+    # 3. ETF/Trust Ticker Similarity Heuristic
+    # If candidate is an ETF/Trust/Fund and shares ticker prefix with target
+    fund_keywords = ["ETF", "TRUST", "FUND", "SHARES", "STRATEGY", "ETN", "NOTE", "COIN"]
+    if any(k in candidate_name for k in fund_keywords):
+        # If tickers share first 2 chars (e.g. ET..), assume relation.
+        if target[:2] == candidate[:2]:
             return True
 
     return False
@@ -150,7 +154,7 @@ def calculate_distances(target_tickers, all_tickers_dict, threshold=1):
                 candidate_name = all_tickers_dict.get(candidate, "")
                 target_name = all_tickers_dict.get(target, "")
                 
-                if is_correlated_by_design(target, candidate, candidate_name):
+                if is_correlated_by_design(target, candidate, target_name, candidate_name):
                     # print(f"Skipping correlated pair: {target} vs {candidate} ({candidate_name})")
                     continue
                 
