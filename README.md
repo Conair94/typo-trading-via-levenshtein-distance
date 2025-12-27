@@ -80,4 +80,4 @@ python3 gcp_upload.py <YOUR_PROJECT_ID>
 *   **Live Scanning:** Convert the batch script into a real-time monitor using a websocket feed.
 
 ---
-*Created by [Your Name]*
+*Created by Connor Lockhart*
