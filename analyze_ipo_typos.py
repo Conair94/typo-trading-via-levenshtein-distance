@@ -219,11 +219,24 @@ def main():
         print("Failed to load tickers.")
         return
 
-    # 2. Fetch IPOs (Last 10 Years)
+    # 2. Fetch IPOs (Last 2 Years)
     print("\n--- Step 2: Fetching IPO Data ---")
     current_year = dt.now().year
-    start_year = current_year - 10
-    df_ipos = get_ipos_range(start_year, current_year)
+    
+    # Handle CLI arguments for years
+    if len(sys.argv) > 2:
+        try:
+            start_year = int(sys.argv[1])
+            end_year = int(sys.argv[2])
+        except ValueError:
+            print("Invalid years provided. Using default 2-year range.")
+            start_year = current_year - 1
+            end_year = current_year
+    else:
+        start_year = current_year - 1
+        end_year = current_year
+        
+    df_ipos = get_ipos_range(start_year, end_year)
     
     if df_ipos.empty:
         print("No IPOs found.")
@@ -233,22 +246,23 @@ def main():
     df_ipos = df_ipos[df_ipos['IPO_Ticker'].notna() & (df_ipos['IPO_Ticker'] != '')]
 
     # 3. Identify Typo Pairs
-    print(f"\n--- Step 3: Identify Typo Pairs for {len(df_ipos)} IPOs ---")
+    print(f"\n--- Step 3: Identify Keyboard-Proximate Typo Pairs for {len(df_ipos)} IPOs ---")
     typo_pairs = []
     
     # Process in batches or show progress
     total = len(df_ipos)
     for i, row in df_ipos.iterrows():
-        if i % 100 == 0:
+        if i % 50 == 0:
             print(f"Scanning IPO {i}/{total}...", end='\r')
             
         candidates = find_typos_for_ipo(row['IPO_Ticker'], row['IPO_Name'], all_tickers)
         for cand in candidates:
-            # Add Date info
-            cand['IPO_Date'] = row['IPO_Date']
-            typo_pairs.append(cand)
+            # ONLY keep keyboard proximate pairs as requested
+            if cand.get('Keyboard_Proximate'):
+                cand['IPO_Date'] = row['IPO_Date']
+                typo_pairs.append(cand)
             
-    print(f"\nFound {len(typo_pairs)} potential typo pairs.")
+    print(f"\nFound {len(typo_pairs)} keyboard-proximate typo pairs.")
     
     if not typo_pairs:
         return
