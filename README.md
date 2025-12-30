@@ -90,6 +90,15 @@ python3 compute_ipo_alpha.py
     *   **Max Potential Return:** 15.50% (Sell High).
     *   **Mean Reversion Confirmed:** Holding to close significantly degrades returns (e.g., FGL -> TGL spiked +2.3% but closed -2.5%).
 
+### Visual Evidence
+**1. Volume Buying Pressure vs. Price Spike:**
+Significant alpha is concentrated in events with >3x average volume.
+![Volume vs Return](images/volume_vs_return_scatter.png)
+
+**2. Anatomy of a Typo Trade (HDL -> BDL):**
+On May 17, 2024, `HDL` IPO'd. The similarly named `BDL` experienced a massive volume spike and price gap at the open, followed by a reversion.
+![HDL-BDL Event](images/hdl_bdl_event.png)
+
 ### Future Roadmap
 *   **Causal Inference:** Implement Granger Causality tests to determine if the Target volume *predicts* the Candidate price movement.
 *   **Live Scanning:** Convert the batch script into a real-time monitor using a websocket feed.
